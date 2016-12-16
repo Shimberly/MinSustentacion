@@ -3057,8 +3057,8 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
+  color: #fff;
+  background-color: black;
   border-color: #ccc;
 }
 .btn-default:focus,
@@ -6754,4 +6754,5 @@ button.close {
     display: none !important;
   }
 }
+#derechos{background-color: gray ; text-align: center ; color:white; font-size: 11 pts; padding-bottom: 10 px }
 /*# sourceMappingURL=bootstrap.css.map */
