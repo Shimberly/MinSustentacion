@@ -2498,6 +2498,90 @@ fieldset {
   margin: 0;
   border: 0;
 }
+	float:left;
+	width:40%;
+	padding:2em 0 0 0;
+}
+.contact-bottom-grid-left p{
+	color: #adadad;
+	line-height: 1.5em;
+	margin: 0 0 0.5em 0;
+}
+.contact-bottom-grids h3{
+	padding:0 0 0.8em 0;
+	margin:0;
+	font-family: 'Roboto Slab', serif;
+}
+.contact-bottom-grid-right{
+	float:right;
+	width:58%;
+	padding:2em 0 0 0;
+}
+.text-fild{
+	width:48%;
+	margin-right:4%;
+	float:left;
+}
+.text-fild span,.msg-fild span,.message-fild span{
+	display:block;
+	font-family: 'Roboto Slab', serif;
+	padding:0 0 0.5em 0;
+}
+.text-fild input[type="text"],.msg-fild input[type="text"],.message-fild textarea{
+	font-family: 'Roboto Slab', serif;
+	padding:0.8em;
+	width:100%;
+	outline:none;
+	color:#2d2d2d;
+}
+.msg-fild{
+	padding:1em 0;
+}
+.text-fild:nth-child(2){
+	margin:0;
+}
+.message-fild textarea{
+	min-height:250px;
+	resize:none;
+}
+ul.about_grid1.about_box {
+	padding: 0;
+	list-style: none;
+}
+ul.about_grid1 li.about_img {
+	float: left;
+	width:50.333%;
+	margin-right: 1.5em;
+}
+ul.about_grid1 li.about_desc {
+	float: none;
+	width: 100%;
+}
+.contact-map iframe {
+		min-height:150px;
+	}
+.dropcap {
+	text-align: left;
+}
+.dropcap {
+	position: relative;
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	background: #6ECCE6;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height:45px;
+	margin-right: 0.5em;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-o-border-radius: 100%;
+}
 legend {
   display: block;
   width: 100%;
