@@ -35,7 +35,7 @@
                            
                         </div>
                         <div class="nav navbar-nav navbar-right">
-                            <a href="../index.html" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                            <a href="../index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
                         </div>
                         
                     </div>

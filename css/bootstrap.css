@@ -3215,15 +3215,15 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #286090;
+  background-color:  #66e0ff;
   border-color: #204d74;
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color:ghostwhite;
+  border-color:	ghostwhite;
 }
 .btn-primary:active:hover,
 .btn-primary.active:hover,
@@ -4582,8 +4582,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #ebebe0;
-  border-color: #e7e7e7;
+  background-color:#e6e6e6;
+  border-color:#e6e6e6;
 }
 .navbar-default .navbar-brand {
   color: #777;
@@ -4847,7 +4847,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   z-index: 3;
   color: #fff;
   cursor: default;
-  background-color: #337ab7;
+  background-color: #e0e0eb;
   border-color: #337ab7;
 }
 .pagination > .disabled > span,
@@ -6843,7 +6843,8 @@ button.close {
     display: none !important;
   }
 }
-#derechos{background-color: gray ; text-align: center ; color:white; font-size: 11 pts; padding-bottom: 10 px }
+#derechos{background-color: gray ; text-align: center; }
+#copy{padding-left: 25px ; color:white; font-size: 11 pts;}
 #fondoGris{background-color: gray }
 #fondoCeleste{background-color:#cce6ff; text-align: center ; color:white; font-size: 11 pts; }
 ul.about_grid1 li.about_img {
@@ -6877,5 +6878,12 @@ ul.about_grid1 li.about_desc {
 	-moz-border-radius: 100%;
 	-o-border-radius: 100%;
 }
-
+#margen{
+    margin-right:-100px;
+  margin-left:-100px;
+}
+#imagenrausel{
+    width:1900px;
+    height:800px;
+}
 /*# sourceMappingURL=bootstrap.css.map */

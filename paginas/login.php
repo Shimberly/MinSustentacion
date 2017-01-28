@@ -2,7 +2,7 @@
 	session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
  <meta charset="utf-8">
 <title>Mineria PKYK</title>
@@ -13,15 +13,12 @@
 <meta name="author" content="Keila Cuenca Icaza">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+
+
 <body>
 
         <div class="container">
         <br>
-            <br>
-<br>
- <br>
-            <br>
-<br>
             <header>
          <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
@@ -63,27 +60,29 @@
             
             </header>
 
-
-            <div class="container"  >
-                  <h2>Por favor ingrese su correo electrónico</h2>
-                    <br>
+    <div class="container" >
+           <br>
           <br>
           <br>
-    
+     <br>
+          <br>
+          <br>
+   
          <div class="row">
                 <div class="col-sm-3">
-                          <br>
-       <br>
-          <br>
-          <br>
-         <br>   
-                  
              </div>
              <div class="col-sm-6 card card-container">
+                  <h2>Iniciar Sesión</h2>
+                 <br>
+                 
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin">
                 <span id="reauth-email" class="reauth-email"></span>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+               <a href="restaurarPassword.php" class="forgot-password">Rayos! Olvidé mi contraseña
+               
+            </a>  
             </form>
 
            
@@ -97,20 +96,27 @@
                 <div class="col-sm-2">
              </div>
             <div class="col-sm-2">
-             <button class="btn btn-sm btn-primary btn-block btn-signin" type="submit" >Enviar</button>
+             <button class="btn btn-sm btn-primary btn-block btn-signin" type="submit" onClick="window.location.href='calidad.html'">Entrar</button>
                 <br>
-               
+                
              </div>
                 <div class="col-sm-5">
                     
              </div>
         </div>
-            </div>
-           <br>
- <br>
- <br>
- <br>
-             <div id="margen">
+         <br>
+          <br>
+          <br>
+       <br>
+          <br>
+          <br>
+    </div>
+             <br>
+                    <br>
+          <br>
+          <br>
+            			          
+            <div id="margen">
                  
                
                  <div id="derechos">
@@ -124,14 +130,17 @@
                       
                 </div>
                 </div>
+            
+                
     </div>
     
-     <script src="../js/j3.js"></script>
+ <script src="../js/j3.js"></script>
     <script src="../js/bootstrap.js"></script>
     <script src="../js/bootstrap.min.js"></script>
      <script src="../js/npm.js"></script>
     <script src="../js/j1.js"></script>
      <script src="../js/j2.js"></script>
     <script src="../js/j4.js"></script>
+ 
     </body>
- </html>
+</html>

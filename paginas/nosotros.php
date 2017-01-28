@@ -17,40 +17,47 @@
 
         <div class="container">
         <br>
-            <header>
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ham1">
-                             <span class="sr-only">Menu</span>
-                            <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                                 
-                            </button>
-                            <a href="../index.html"><img class="img-responsive" src="../imagenes/LOGO5.png" alt="logo" height="150" width=150></a>
-                           
-                        </div>
-                        <div >
-                        <br>
-                        <a href="login.html"><img class="img-responsive pull-right  hidden-xs" src="../imagenes/3.png" alt="logear" width="100" height="100" ></a>
-                  
-                        </div>
-                        <div class="collapse navbar-collapse" id="ham1">
-                        <ul class="nav navbar-nav">
-                           
-                              <li><a href="about.html">Acerca de</a></li>
-                            <li><a href="nosotros.html">Nosotros</a></li>
-                            <li><a href="servicios.html">Servicios</a></li>
-                              <li><a href="contacto.html">Contacto</a></li>
-                            </ul>
-                            
-                            
+                        <header>
+                            <br>
+                             <br>
+                              <br>
+         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="../index.php"><img src="../imagenes/LOGO5.png" width="80" height="25"></a>
+            </div>
 
-                        </div>
-                    </div>
-                </nav>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#">Acerca</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="nosotros.php">Nosotros</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="servicios.php">Servicios</a>
+                    </li>
+                     <li class="page-scroll">
+                        <a href="contacto.php">Contacto</a>
+                    </li>
+                    <li >
+                        <a  href="login.html"><img class="img-responsive" src="../imagenes/3.png" width="80" height="25" alt="login" ></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
             
             </header>
             <div class="main">
@@ -110,10 +117,35 @@
                 </div>
              </div>
 
-
-                <div id="derechos">
-                    <h6>Todos los Derechos reservados</h6>
+		
+			           <div class="container hidden-xs">
+            <div id="margen">
+                 
+               
+                 <div id="derechos">
+                  <div class="row">
+                      
+                    <br>
+                       <div class="col-lg-12">
+                      <p id="copy">Todos los Derechos reservados ©sanmucuva 2017</p>
+                     </div>
+                     </div>
+                      
                 </div>
+                </div>
+                </div>
+            <div class="visible-xs">
+                          <br>
+               <div id="fondoGris">
+                 
+                   <a href="../paginas/login.html"><img class="img-responsive" src="../imagenes/3.png" width="100" height="100" alt="login" ></a>
+               </div>
+                           
+            </div>
+    
+                
+            
+    
 
 
         </div>
