@@ -100,7 +100,7 @@
             <div class="col-sm-2">
 <br>
 <br>
-             <button class="btn btn-sm btn-primary btn-block btn-signin" type="submit" onClick="window.location.href='calidad.html'">Entrar</button>
+             <button class="btn btn-sm btn-primary btn-block btn-signin" type="submit" onClick="window.location.href='calidad.php'">Entrar</button>
                 <br>
                 
              </div>
