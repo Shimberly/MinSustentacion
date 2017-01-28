@@ -80,7 +80,9 @@
                 <span id="reauth-email" class="reauth-email"></span>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-               <a href="restaurarPassword.php" class="forgot-password">Rayos! Olvidé mi contraseña
+ <br>
+<br>
+              <a href="restaurarPassword.php" class="forgot-password">¡Rayos! Olvidé mi contraseña
                
             </a>  
             </form>
@@ -96,6 +98,8 @@
                 <div class="col-sm-2">
              </div>
             <div class="col-sm-2">
+<br>
+<br>
              <button class="btn btn-sm btn-primary btn-block btn-signin" type="submit" onClick="window.location.href='calidad.html'">Entrar</button>
                 <br>
                 

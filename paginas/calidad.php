@@ -19,35 +19,52 @@
 
         <div class="container">
         <br>
-            <header>
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#haml">
-                             <span class="sr-only">Menu</span>
-                            <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                             
-                                 
-                            </button>
-                            <img alt="dino" class="img-responsive" src="../imagenes/LOGO5.png" height="110" width=110>
-                           
-                        </div>
-                        <div class="nav navbar-nav navbar-right">
-                            <a href="../index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
-                        </div>
-                        
-                    </div>
-                </nav>
-               
+      <header>
+         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#"><img src="../imagenes/LOGO5.png" width="80" height="35"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    
+                    <li >
+                         <a href="../index.html" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                    
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+            
             </header>
+            
+          <br>
+<br>  
+         <br>
+<br>  
+          <br>
+<br>  
+         <br>
+<br>
+
             <div class="container ">
                 <div class="row">
                     <div class="col-sm-3">
 			    <div style="text-align:center;">
 				<h1> Mineria UC </h1>
-				<img alt="logo" class="img-responsive" src="../imagenes/logoCompañiaMinera.png">
+				<img alt="logo" class="img-responsive" src="../imagenes/logoCompañiaMinera.png" >
 					
 			    </div>
                             <div class="collapse navbar-collapse" id="haml">
@@ -146,7 +163,7 @@
 					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 						<div class="row">
 						<div class="col-md-6 ">
-							<div style="background-color:aquamarine; text-align:center">
+							<div style="background-color:#e0e0eb; text-align:center">
 								<br><br>
 								<p>Mensual</p> 
 								<br><br>
@@ -154,7 +171,7 @@
 	
 						</div>
 						<div class="col-md-6 ">
-							<div style="background-color:#8181F7; text-align:center">
+							<div style="background-color:#b3b3b3; text-align:center">
 								<br><br>
 								<p>Anual</p> 
 								<br><br>
@@ -213,24 +230,31 @@
                     
             </div>
             
+                      <br>
+<br>  
+         <br>
+<br>
             
             
-            
-            <div class="visible-xs">
-             
-                   <div id="fondoGris">
-
-                       <a href="../index.html" class="btn btn-primary btn-lg active" role="button">Logout</a>
-                   </div>
-
-            </div>
-            
-            <footer class="hidden-xs">
+      <div class="container hidden-xs">
+            <div id="margen">
+                 
+               
                  <div id="derechos">
-                <br>
-                <h6>Todos los Derechos reservados</h6>
+                  <div class="row">
+                      
+                    <br>
+                       <div class="col-lg-12">
+                      <p id="copy">Todos los Derechos reservados ©sanmucuva 2017</p>
+                     </div>
+                     </div>
+                      
+                </div>
+                </div>
+                
+            
             </div>
-            </footer>
+            
             
         
     </div>

@@ -38,7 +38,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#">Acerca</a>
+                        <a href="about.php">Acerca</a>
                     </li>
                     <li class="page-scroll">
                         <a href="nosotros.php">Nosotros</a>

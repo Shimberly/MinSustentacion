@@ -59,28 +59,74 @@
     </nav>
             
             </header>
-    <div id="contenedor">
-        <div id="myCarousel" class="carousel slide">
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-          </ol>
-          <!-- Carousel items -->
-          <div class="carousel-inner">
-            <div class="active item"><img  src="../imagenes/10.jpg" alt="banner1"  /></div>
-            <div class="item"><img class="img-responsive" src="../imagenes/15.jpg"  alt="banner2" /></div>
-            <div class="item"><img class="img-responsive" src="../imagenes/11.jpg" alt="banner3" /></div>
-            <div class="item"><img  class="img-responsive"src="../imagenes/12.jpg"   alt="banner4" /></div>
-            <div class="item"><img  class="img-responsive" src="../imagenes/14.jpg"  alt="banner5" /></div>
-          </div>
-          <!-- Carousel nav -->
-          <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-          <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+ <div class="col-lg-12 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="../imagenes/12.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-3 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="../imagenes/17.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-3 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="../imagenes/14.jpg" alt="aa">
+                </a>
+            </div>
+         
+           
+            <div class="col-lg-4 col-md-3 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="../imagenes/13.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-3 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="../imagenes/14.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-3 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="../imagenes/15.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-3 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive"src="../imagenes/16.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-3 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="../imagenes/17.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-3 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="../imagenes/1.jpg" alt="">
+                </a>
+            </div>
+         
+          
+           
         </div>
-    </div>
+
+        <hr>
+
+
+
+
+
+
+
+
+
        
 			           <div class="container hidden-xs">
             <div id="margen">
@@ -109,7 +155,7 @@
            
            
     </div>
-    
+    </div>
     <script src="../js/j3.js"></script>
     <script src="../js/bootstrap.js"></script>
     <script src="../js/bootstrap.min.js"></script>

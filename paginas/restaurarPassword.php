@@ -17,12 +17,19 @@
 
         <div class="container">
         <br>
-            <br>
 <br>
- <br>
-            <br>
 <br>
-            <header>
+<br>
+           <br>
+<br>
+<br>
+<br>
+         <br>
+<br>
+<br>
+<br>
+         <br>
+                        <header>
          <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,17 +69,17 @@
     </nav>
             
             </header>
-
-
             <div class="container"  >
-                  <h2>Por favor ingrese su correo electrónico</h2>
-                    <br>
+                  
           <br>
           <br>
-    
-         <div class="row">
-                <div class="col-sm-3">
+    <h2 >Por favor ingrese su correo electrónico</h2>
                           <br>
+         <div class="row">
+
+                    <br>
+                <div class="col-sm-3">
+
        <br>
           <br>
           <br>
@@ -106,11 +113,20 @@
              </div>
         </div>
             </div>
+           
            <br>
- <br>
- <br>
- <br>
-             <div id="margen">
+<br>
+<br>
+<br>
+         <br>
+<br>
+<br>
+<br>
+         <br>
+<br>
+<br>
+<br>
+            <div id="margen">
                  
                
                  <div id="derechos">
@@ -124,6 +140,7 @@
                       
                 </div>
                 </div>
+
     </div>
     
      <script src="../js/j3.js"></script>
