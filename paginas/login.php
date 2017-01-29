@@ -64,7 +64,7 @@
            <br>
           <br>
           <br>
-     <br>
+          <br>
           <br>
           <br>
    
@@ -75,39 +75,23 @@
                   <h2>Iniciar Sesión</h2>
                  <br>
                  
-            <p id="profile-name" class="profile-name-card"></p>
-            <form class="form-signin">
-                <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
- <br>
-<br>
-              <a href="restaurarPassword.php" class="forgot-password">¡Rayos! Olvidé mi contraseña
-               
-            </a>  
-            </form>
-
+                    <p id="profile-name" class="profile-name-card"></p>
+                    <form class="form-signin" method="post" action="validarLogin.php">
+                        <span id="reauth-email" class="reauth-email"></span>
+                        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
+                        <input type="password" name="clave" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                        <br>
+                        <br>
+                        <a href="restaurarPassword.php" class="forgot-password">¡Rayos! Olvidé mi contraseña</a>  
+                        <br>
+                        <br>
+                        <button class="btn btn-sm btn-primary btn-block" type="submit">Entrar</button>
+                  
+                    </form>
+             </div>
            
         </div>
-              <div class="col-sm-3">
-             </div>
-        </div>
-        <div class="row">
-                <div class="col-sm-3">
-             </div>
-                <div class="col-sm-2">
-             </div>
-            <div class="col-sm-2">
-<br>
-<br>
-             <button class="btn btn-sm btn-primary btn-block btn-signin" type="submit" onClick="window.location.href='calidad.php'">Entrar</button>
-                <br>
-                
-             </div>
-                <div class="col-sm-5">
-                    
-             </div>
-        </div>
+        
          <br>
           <br>
           <br>

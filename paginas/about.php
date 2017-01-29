@@ -49,7 +49,17 @@
                         <a href="contacto.php">Contacto</a>
                     </li>
                     <li >
-                        <a  href="login.html"><img class="img-responsive" src="../imagenes/3.png" width="80" height="25" alt="login" ></a>
+                         <?php
+		                  if (isset($_SESSION['muñoz'])){
+                        ?>
+                            <a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                        <?php
+                          }else{    
+                        ?>
+                             <a href="index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                         <?php
+                          } 
+                        ?>
                     </li>
                 </ul>
             </div>

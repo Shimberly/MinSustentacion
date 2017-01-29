@@ -3203,6 +3203,8 @@ fieldset[disabled] .btn-default.focus {
   background-color: #333;
 }
 .btn-primary {
+text-align: center;
+   
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -3533,6 +3535,7 @@ fieldset[disabled] .btn-link:focus {
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
+   
 }
 .btn-xs,
 .btn-group-xs > .btn {
@@ -3542,6 +3545,7 @@ fieldset[disabled] .btn-link:focus {
   border-radius: 3px;
 }
 .btn-block {
+  
   display: block;
   width: 100%;
 }

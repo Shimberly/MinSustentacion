@@ -27,7 +27,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#"><img src="imagenes/LOGO5.png" width="80" height="30"></a>
+                <a class="navbar-brand" href="index.php"><img src="imagenes/LOGO5.png" width="80" height="30"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,7 +49,17 @@
                         <a href="paginas/contacto.php">Contacto</a>
                     </li>
                     <li >
-                        <a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                        <?php
+		                  if (isset($_SESSION['muñoz'])){
+                        ?>
+                            <a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                        <?php
+                          }else{    
+                        ?>
+                             <a href="index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                         <?php
+                          } 
+                        ?>
                     </li>
                 </ul>
             </div>

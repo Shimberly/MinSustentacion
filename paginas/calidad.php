@@ -27,7 +27,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#"><img src="../imagenes/LOGO5.png" width="80" height="35"></a>
+                <a class="navbar-brand" href="../index.php"><img src="../imagenes/LOGO5.png" width="80" height="35"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -36,9 +36,11 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    
+                    <?php
+                    echo "<p>Hola </p>" .$_SESSION['mineria']
+                    ?>
                     <li >
-                         <a href="../index.html" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                         <a href="../index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
                     
                     </li>
                 </ul>
