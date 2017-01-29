@@ -50,16 +50,18 @@
                     </li>
                     <li >
                          <?php
-		                  if (isset($_SESSION['muñoz'])){
+		                  if (isset($_SESSION['mineria'])){
                         ?>
-                            <a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                           <a href="../index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
                         <?php
                           }else{    
                         ?>
-                             <a href="index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
-                         <?php
+                             
+                             <a  href="login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                             <?php
                           } 
                         ?>
+                         
                     </li>
                 </ul>
             </div>
