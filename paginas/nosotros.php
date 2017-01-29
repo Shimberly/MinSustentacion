@@ -33,7 +33,21 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+ <div class="sesion">
+                          <?php
+		                  if (isset($_SESSION['mineria'])){
+                            echo "<p>Hola <span>".$_SESSION['mineria']."</span></p>"
+                        ?>                          
+                        <?php
+                                
+                          }else{    
+                        ?>
+                             <?php
+                          } 
+                        ?>
+		</div>
+                <ul class="nav navbar-nav navbar-right alinear">
+                         
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>

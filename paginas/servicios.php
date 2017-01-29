@@ -24,7 +24,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="../index.php"><img src="../imagenes/LOGO5.png" width="80" height="30"></a>
@@ -32,7 +32,22 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+		<div class="sesion">
+                          <?php
+		                  if (isset($_SESSION['mineria'])){
+                            echo "<p>Hola <span>".$_SESSION['mineria']."</span></p>"
+                        ?>
+                           
+                        <?php
+                                
+                          }else{    
+                        ?>
+                             <?php
+                          } 
+                        ?>
+		</div>
+		
+                <ul class="nav navbar-nav navbar-right alinear">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
