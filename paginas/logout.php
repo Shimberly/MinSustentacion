@@ -14,10 +14,10 @@ session_start();
 	<h1>LOGOUT</h1>
 	<?php
 
-        if (isset($_SESSION['muñoz'])){
+        if (isset($_SESSION['mineria'])){
                 session_destroy();
-                echo "Se ha destruido la sesion";
-                echo "<br><a href='index.php'><button>Volver<button></a>";
+                
+                echo "<br><a href='../index.php'><button>Volver<button></a>";
         }else{
                 echo "Error";
                 echo "<a href='index.php'><button>Volver<button></a>";

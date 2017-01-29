@@ -52,7 +52,7 @@
                         <?php
 		                  if (isset($_SESSION['mineria'])){
                         ?>
-                           <a href="index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                           <a href="./paginas/logout.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
                         <?php
                           }else{    
                         ?>
@@ -97,7 +97,7 @@
                           <br>
                <div id="fondoGris">
                  
-                   <a href="paginas/login.html"><img class="img-responsive" src="imagenes/3.png" width="100" height="100" alt="login" ></a>
+                   <a href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="100" height="100" alt="login" ></a>
                </div>
                            
             </div>
