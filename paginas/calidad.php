@@ -44,7 +44,7 @@
                   
                    
                     <li class="page-scroll" >
-                         <a class="navbar-brand" href="../index.php"><img src="../imagenes/logout.png" width="80" height="35"></a>
+                         <a class="navbar-brand" href="logout.php"><img src="../imagenes/logout.png" width="80" height="35"></a>
                     
                     </li>
                 </ul>
