@@ -62,20 +62,30 @@
                      <li class="page-scroll">
                         <a href="contacto.php">Contacto</a>
                     </li>
-                   <li >
+                 
                         <?php
 		                  if (isset($_SESSION['mineria'])){
                         ?>
-                           <a href="../index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                         <li class="page-scroll">
+                       <a  href="calidad.php">reporte</a>
+                    </li>
+                        <li class="page-scroll">
+                             <a class="navbar-brand" href="logout.php"><img src="../imagenes/logout.png" width="80" height="35"></a>
+                
+                    </li>
+                       
+                       
                         <?php
                           }else{    
                         ?>
+                    <li class="page-scroll">
                              
                              <a  href="login.php"><img class="img-responsive" src="../imagenes/3.png" width="80" height="35" alt="login" ></a>
+                    </li>
                              <?php
                           } 
                         ?>
-                    </li>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
