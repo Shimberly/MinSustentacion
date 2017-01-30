@@ -8,6 +8,7 @@
 <title>Mineria PKYK</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+    
     <meta name="description" content="Seguridad Minera">
 <meta name="keywords" content="mineria,drones,seguridad">
 <meta name="author" content="Keila Cuenca Icaza">
@@ -52,14 +53,14 @@
                         <?php
 		                  if (isset($_SESSION['mineria'])){
                         ?>
-                    <li class="page-scroll">
-                       <a  href="paginas/calidad.php">reporte</a>
-                    </li>
-                        <li class="page-scroll">
-                             <a class="navbar-brand" href="paginas/logout.php"><img src="imagenes/logout.png" width="80" height="35"></a>
-                
-                    </li>
-                       
+               <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php
+                    echo "Hola " .$_SESSION['mineria']
+                    ?><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="paginas/calidad.php">Reporte</a></li>
+                                <li><a href="paginas/logout.php">Salir</a></li>
+                            </ul>
+                        </li>
                         <?php
                           }else{    
                         ?>
@@ -115,15 +116,16 @@
 
    
 
-    <!-- Theme JavaScript -->
-    
+
     <script src="js/j3.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
      <script src="js/npm.js"></script>
     <script src="js/j1.js"></script>
      <script src="js/j2.js"></script>
     <script src="js/j4.js"></script>
+
+
  
     </body>
  </html>
