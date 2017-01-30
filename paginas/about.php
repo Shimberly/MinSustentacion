@@ -72,7 +72,7 @@
                           }else{    
                         ?>
                              
-                             <a  href="login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                             <a  href="login.php"><img class="img-responsive" src="../imagenes/3.png" width="80" height="35" alt="login" ></a>
                              <?php
                           } 
                         ?>

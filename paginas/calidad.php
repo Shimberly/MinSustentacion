@@ -32,15 +32,19 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+       <ul class="nav navbar-nav navbar-right alinear">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <?php
+                    <li class="page-scroll">
+                     <?php
                     echo "<p>Hola </p>" .$_SESSION['mineria']
                     ?>
-                    <li >
-                         <a href="../index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                    </li >
+                  
+                   
+                    <li class="page-scroll" >
+                         <a class="navbar-brand" href="../index.php"><img src="../imagenes/logout.png" width="80" height="35"></a>
                     
                     </li>
                 </ul>
@@ -261,13 +265,14 @@
         
     </div>
     </div>
-     <script src="js/j3.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-     <script src="js/npm.js"></script>
-    <script src="js/j1.js"></script>
-     <script src="js/j2.js"></script>
-    <script src="js/j4.js"></script>
+        
+<script src="../js/j3.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/npm.js"></script>
+    <script src="../js/j1.js"></script>
+     <script src="../js/j2.js"></script>
+    <script src="../js/j4.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>	
