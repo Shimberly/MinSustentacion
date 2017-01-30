@@ -67,7 +67,7 @@
                         <?php
 		                  if (isset($_SESSION['mineria'])){
                         ?>
-                           <a href="../index.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
+                           <a href="logout.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
                         <?php
                           }else{    
                         ?>
