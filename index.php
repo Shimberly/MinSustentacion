@@ -119,7 +119,7 @@
 
     <script src="js/j3.js"></script>
     <script src="js/bootstrap.js"></script>
-
+    <script src="js/bootstrap.min.js"></script>
      <script src="js/npm.js"></script>
     <script src="js/j1.js"></script>
      <script src="js/j2.js"></script>
