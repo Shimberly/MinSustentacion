@@ -32,18 +32,6 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 <div class="sesion">
-                          <?php
-		                  if (isset($_SESSION['mineria'])){
-                            echo "<p>Hola <span>".$_SESSION['mineria']."</span></p>"
-                        ?>
-                           
-                        <?php
-                                
-                          }else{    
-                        ?>
-                             <?php
-                          } 
-                        ?>
 		</div>
                 <ul class="nav navbar-nav navbar-right alinear">
                           
@@ -66,26 +54,22 @@
                         <?php
 		                  if (isset($_SESSION['mineria'])){
                         ?>
-                         <li class="page-scroll">
-                       <a  href="calidad.php">reporte</a>
-                    </li>
-                        <li class="page-scroll">
-                             <a class="navbar-brand" href="logout.php"><img src="../imagenes/logout.png" width="80" height="35"></a>
-                
-                    </li>
-                       
-                       
+               <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php
+                    echo "Hola " .$_SESSION['mineria']
+                    ?><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="calidad.php">Reporte</a></li>
+                                <li><a href="logout.php">Salir</a></li>
+                            </ul>
+                        </li>
                         <?php
                           }else{    
                         ?>
-                    <li class="page-scroll">
-                             
-                             <a  href="login.php"><img class="img-responsive" src="../imagenes/3.png" width="80" height="35" alt="login" ></a>
-                    </li>
+                             <li class="page-scroll"><a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                                 </li>
                              <?php
                           } 
                         ?>
-                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
