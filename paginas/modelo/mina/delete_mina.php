@@ -1,11 +1,11 @@
 <?php
 session_start();
-include_once("DemoCollector.php");
+include_once("MinaCollector.php");
 
 $id = $_GET['ID'];
 
 
-$DemoCollectorObj = new DemoCollector();
+$MinaCollectorObj = new MinaCollector();
 ?>
 
 <!DOCTYPE html>
@@ -13,16 +13,16 @@ $DemoCollectorObj = new DemoCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="estilo.css" rel="stylesheet">
+        <link href="../estilo.css" rel="stylesheet">
     	
     
     </head>
     <body>
         <?php
         echo "<p>Se elimino la tabla #" . $id ."?</p>";
-        $DemoCollectorObj->deleteDemo($id);
+        $MinaCollectorObj->deleteMina($id);
         ?>
-        <a href="read_Demo.php"><button>VOLVER</button></a>
+        <a href="read_mina.php"><button>VOLVER</button></a>
        
   
     </body>

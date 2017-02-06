@@ -23,7 +23,7 @@ $MinaCollectorObj = new MinaCollector();
         <div class="usuario">
         <?php
             echo "<p>Hola usuario <span class='nmbUser'>" . $usuario . "<span> </p>";
-            echo "<a href='logout.php'><button>Salir</button></a>";
+            echo "<a href='../../calidad.php'><button>Salir</button></a>";
 		    
         ?>
         </div>

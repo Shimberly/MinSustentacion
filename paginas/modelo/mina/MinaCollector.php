@@ -27,6 +27,11 @@ class MinaCollector extends collector
         $rows = self::$db->insertRow("INSERT INTO Mina (nombre, id_empresa,ubicacion) VALUES ('$nombre', '$id_empresa','$ubicacion')",null);
         
     }
+    
+     function updateMina($nombre,$id_empresa,$ubicacion) {
+        $rows = self::$db->insertRow("INSERT INTO Mina (nombre, id_empresa,ubicacion) VALUES ('$nombre', '$id_empresa','$ubicacion')",null);
+        
+    }
 }
 ?>
 
