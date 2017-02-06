@@ -196,9 +196,20 @@
 								<br><br>
                                 <h1>Tablas de la base de datos</h1>
                                 <h2>Paul</h2>
-                                <a href=""#>{ PRODUCCIÓN }</a>
-                                <a href=""#>{ DETALLE DE PRODUCCIÓN }</a>
-                                <a href=""#>{ MINERAL }</a>
+                                <a href="modelo/produccion/produccion.php"#>{ PRODUCCIÓN }</a>
+                                <a href="modelo/detalle_produccion/detalle_produccion.php"#>{ DETALLE DE PRODUCCIÓN }</a>
+                                <a href="modelo/mineral/mineral.php"#>{ MINERAL }</a>
+                                <a href="modelo/reporte_tuneles/read_reporte_tuneles.php"#>{ REPORTE TUNELES }</a>
+                                <a href="modelo/detalle_reporte/read_detalle_reporte.php"#>{ DETALLE REPORTE }</a>
+                                <a href="modelo/datos_tunel/read_datos_tunel.php"#>{ DATOS TUNELES }</a>
+                                <a href="modelo/tunel/read_tunel.php"#>{ TUNEL }</a>
+                                <a href="modelo/mina/read_mina.php"#>{ MINA }</a>
+                                <a href=""#>{ CIUDAD }</a>
+                                <a href=""#>{ PAIS }</a>
+                                <a href=""#>{ EMPRESA }</a>
+                                <a href=""#>{ PERSONA }</a>
+                                <a href=""#>{ LICENCIA }</a>
+                                <a href=""#>{ DRON }</a>
 								<br><br>
 							</div>
 	
