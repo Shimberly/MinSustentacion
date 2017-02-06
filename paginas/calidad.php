@@ -184,6 +184,17 @@
 							</div>
 	
 						</div>
+                            <div class="col-md-12 ">
+								<br><br>
+                                <h1>Tablas de la base de datos</h1>
+                                <h2>Paul</h2>
+                                <a href=""#>{ PRODUCCIÓN }</a>
+                                <a href=""#>{ DETALLE DE PRODUCCIÓN }</a>
+                                <a href=""#>{ MINERAL }</a>
+								<br><br>
+							</div>
+	
+						</div>
 							
 						</div>
 
