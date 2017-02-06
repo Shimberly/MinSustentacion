@@ -18,18 +18,18 @@ class TunelCollector extends collector
   }
     
     function deleteTunel($id) {
-        $rows = self::$db->deleteRow("DELETE FROM Tunel WHERE id_Tunel=$id",null);
+        $rows = self::$db->deleteRow("DELETE FROM Tunel WHERE id_tunel=$id",null);
     
     
     }
    
     function createTunel($extension,$num_frente,$id_mina) {
-        $rows = self::$db->insertRow("INSERT INTO tunel (extension, num_frente,id_mina) VALUES ('$extension', '$num_frente','$id_mina')",null);
+        $rows = self::$db->insertRow("INSERT INTO tunel (extension, numero_frente,id_mina) VALUES ('$extension', '$num_frente','$id_mina')",null);
         
     }
     
      function updateTunel($id,$extension,$num_frente,$id_mina) {
-        $rows = self::$db->insertRow("UPDATE tunel SET extension='$extension' , num_frente='$num_frente' ,id_mina= '$id_mina' WHERE id_Tunel='$id'" ,null);
+        $rows = self::$db->insertRow("UPDATE tunel SET extension='$extension' , numero_frente='$num_frente' ,id_mina= '$id_mina' WHERE id_Tunel='$id'" ,null);
         
     }
 }

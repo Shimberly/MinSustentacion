@@ -1,13 +1,13 @@
 <?php
 session_start();
-include_once("MinaCollector.php");
+include_once("TunelCollector.php");
 
-$nombre = $_POST['nombre'];
-$id_empresa = $_POST['id_empresa'];
-$ubicacion = $_POST['ubicacion'];
+$extension = $_POST['extension'];
+$num_frente = $_POST['num_frente'];
+$id_mina = $_POST['id_mina'];
 
 
-$MinaCollectorObj = new MinaCollector();
+$TunelCollectorObj = new TunelCollector();
 ?>
 
 <!DOCTYPE html>
@@ -21,10 +21,10 @@ $MinaCollectorObj = new MinaCollector();
     </head>
     <body>
         <?php
-        echo "<p>Se creo una nueva mina</p>";
-        $MinaCollectorObj->createMina($nombre,$id_empresa,$ubicacion);
+        echo "<p>Se creo un nuevo Tunel</p>";
+        $TunelCollectorObj->createTunel($extension,$num_frente,$id_mina);
         ?>
-        <a href="read_mina.php"><button>VOLVER</button></a>
+        <a href="read_tunel.php"><button>VOLVER</button></a>
        
   
     </body>

@@ -1,11 +1,11 @@
 <?php
 session_start();
-include_once("MinaCollector.php");
+include_once("TunelCollector.php");
 
 $id = $_GET['ID'];
 
 
-$MinaCollectorObj = new MinaCollector();
+$TunelCollectorObj = new TunelCollector();
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +20,9 @@ $MinaCollectorObj = new MinaCollector();
     <body>
         <?php
         echo "<p>Se elimino la tabla #" . $id ."?</p>";
-        $MinaCollectorObj->deleteMina($id);
+        $TunelCollectorObj->deleteTunel($id);
         ?>
-        <a href="read_mina.php"><button>VOLVER</button></a>
+        <a href="read_tunel.php"><button>VOLVER</button></a>
        
   
     </body>

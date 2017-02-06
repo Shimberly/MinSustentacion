@@ -1,14 +1,13 @@
 <?php
 session_start();
-?>
-<?php
-include_once("MinaCollector.php");
+
+include_once("../mina/MinaCollector.php");
 $usuario = $_SESSION['mineria'];
 
 $id = $_GET['ID'];
-$nombre = $_GET['NM'];
-$id_empresa = $_GET['IE'];
-$ubicacion = $_GET['UB'];
+$extension = $_GET['EX'];
+$id_mina = $_GET['IM'];
+$num_frente = $_GET['NF'];
 
 $MinaCollectorObj = new MinaCollector();
 
@@ -17,7 +16,7 @@ $MinaCollectorObj = new MinaCollector();
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Clase Mina </title>
+	<title>Clase Tunel </title>
     <link rel="stylesheet" href="../estilo.css">
           
 </head>
@@ -27,50 +26,50 @@ $MinaCollectorObj = new MinaCollector();
         <div class="usuario">
         <?php
             echo "<p>Hola usuario <span class='nmbUser'>" . $usuario . "<span> </p>";
-            echo "<a href='read_mina.php'><button>Salir</button></a>";
+            echo "<a href='read_tunel.php'><button>Salir</button></a>";
 		    
         ?>
         </div>
      </header>
     <div class="contLogin">
-                <h1>MODIFICAR USUARIO</h1>
-                <form class="login" method="post" action="save_update_mina.php">
+                <h1>MODIFICAR TUNEL</h1>
+                <form class="login" method="post" action="save_update_tunel.php">
                       <?php
-                        echo "<label >Id_Mina</label>";
+                        echo "<label >Id_Tunel</label>";
 
-                        echo "<input type='text' name='id_mina' value='". $id ."' readonly>";
+                        echo "<input type='text' name='id_tunel' value='". $id ."' readonly>";
 
                         echo "<br>";
 
-                        echo "<label >Nombre </label>";
+                        echo "<label >extension </label>";
                   
                     
                     
-                        echo "<input type='text' name='nombre' value='". $nombre ."'>";
+                        echo "<input type='text' name='extension' value='". $extension ."'>";
 
                         echo "<br>";
 
-                        echo "<label>Id_Empresa</label>";
+                        echo "<label>id_mina</label>";
 
 
-                         echo "<select value='". $id_empresa ."' name='id_empresa'>";
+                         echo "<select value='". $id_mina ."' name='id_mina'>";
                          foreach ($MinaCollectorObj->showMinas() as $c){
-                            if ($id_empresa == $c->getIdEmpresa()){
-                                echo "<option selected>". $c->getIdEmpresa()."</option>";
+                            if ($id_mina == $c->getIdMina()){
+                                echo "<option selected>". $c->getIdMina()."</option>";
                             }else{   
-                                echo "<option>". $c->getIdEmpresa()."</option>";
+                                echo "<option>". $c->getIdMina()."</option>";
                             }
                          }
                          echo "</select>";
                     
                         echo "<br>";
 
-                        echo "<label>Ubicacion &nbsp;&nbsp;&nbsp;</label>";
-                        echo "<input type='text' value='". $ubicacion ."' name='ubicacion'>"
+                        echo "<label>num_frente &nbsp;&nbsp;&nbsp;</label>";
+                        echo "<input type='text' value='". $num_frente ."' name='num_frente'>"
                     ?>
                     <br><br>
                     <?php
-                    echo "<a href='save_update_mina.php?ID=". $id ."'><button type='submit'>Modificar</button></a>";
+                    echo "<a href='save_update_tunel.php?ID=". $id ."'><button type='submit'>Modificar</button></a>";
                     ?>
                 </form>
             </div>
