@@ -36,17 +36,25 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
-                     <?php
-                    echo "<p>Hola </p>" .$_SESSION['mineria']
-                    ?>
-                    </li >
-                  
-                   
-                    <li class="page-scroll" >
-                         <a class="navbar-brand" href="logout.php"><img src="../imagenes/logout.png" width="80" height="35"></a>
-                    
-                    </li>
+                  <?php
+		                  if (isset($_SESSION['mineria'])){
+                        ?>
+               <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php
+                    echo "Hola " .$_SESSION['mineria']
+                    ?><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            
+                                <li><a href="logout.php">Salir</a></li>
+                            </ul>
+                        </li>
+                        <?php
+                          }else{    
+                        ?>
+                             <li class="page-scroll"><a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                                 </li>
+                             <?php
+                          } 
+                        ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
