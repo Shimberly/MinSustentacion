@@ -4,7 +4,11 @@ session_start();
 <?php
 include_once("MinaCollector.php");
 $usuario = $_SESSION['mineria'];
-$id =1;
+
+$id = $_GET['ID'];
+$nombre = $_GET['NM'];
+$id_empresa = $_GET['IE'];
+$ubicacion = $_GET['UB'];
 
 $MinaCollectorObj = new MinaCollector();
 
@@ -29,30 +33,45 @@ $MinaCollectorObj = new MinaCollector();
         </div>
      </header>
     <div class="contLogin">
-                <h1>CREAR USUARIO</h1>
-                <form class="login" method="post" action="save_mina.php">
-                    <label >Nombre </label>
-                    <input type="text" name="nombre" placeholder="Introduce tu nombre">
+                <h1>MODIFICAR USUARIO</h1>
+                <form class="login" method="post" action="save_update_mina.php">
+                      <?php
+                        echo "<label >Id_Mina</label>";
 
-                    <br>
+                        echo "<input type='text' name='id_mina' value='". $id ."' readonly>";
 
-                    <label>Id_Empresa</label>
-                   
-                    <?php
-                     echo "<select name='id_empresa'>";
-                     foreach ($MinaCollectorObj->showMinas() as $c){
-                        echo "<option>". $c->getIdEmpresa()."</option>";
-                     }
-                     echo "</select>";
+                        echo "<br>";
+
+                        echo "<label >Nombre </label>";
+                  
+                    
+                    
+                        echo "<input type='text' name='nombre' value='". $nombre ."'>";
+
+                        echo "<br>";
+
+                        echo "<label>Id_Empresa</label>";
+
+
+                         echo "<select value='". $id_empresa ."' name='id_empresa'>";
+                         foreach ($MinaCollectorObj->showMinas() as $c){
+                            if ($id_empresa == $c->getIdEmpresa()){
+                                echo "<option selected>". $c->getIdEmpresa()."</option>";
+                            }else{   
+                                echo "<option>". $c->getIdEmpresa()."</option>";
+                            }
+                         }
+                         echo "</select>";
+                    
+                        echo "<br>";
+
+                        echo "<label>Ubicacion &nbsp;&nbsp;&nbsp;</label>";
+                        echo "<input type='text' value='". $ubicacion ."' name='ubicacion'>"
                     ?>
-                     <br>
-
-                    <label>Ubicacion &nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" name="ubicacion" placeholder="Introduce la ubicacion de la mina">
-
                     <br><br>
-                    <button type="submit">Modificar</button>
-
+                    <?php
+                    echo "<a href='save_update_mina.php?ID=". $id ."'><button type='submit'>Modificar</button></a>";
+                    ?>
                 </form>
             </div>
     </body>

@@ -46,7 +46,8 @@ $MinaCollectorObj = new MinaCollector();
             echo "<td>" . $c->getNombre() . "</td>";             echo "<td>" . $c->getIdEmpresa() . "</td>";   
             echo "<td>" . $c->getUbicacion() . "</td>";   
             
-            echo "<td><a href='update_mina.php'><button>Editar</button></a></td>";
+            echo "<td><a href='update_mina.php?ID=". $c->getIdMina() ."&NM=". $c->getNombre() ."&IE=". $c->getIdEmpresa() ."&UB=". $c->getUbicacion() ."'><button>Editar</button></a></td>";
+                
             echo "<td><a href='delete_mina.php?ID=". $c->getIdMina() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
                 
