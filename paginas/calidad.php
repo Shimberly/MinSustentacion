@@ -199,14 +199,20 @@
                                 <a href="modelo/produccion/produccion.php"#>{ PRODUCCIÓN }</a>
                                 <a href="modelo/detalle_produccion/detalle_produccion.php"#>{ DETALLE DE PRODUCCIÓN }</a>
                                 <a href="modelo/mineral/read_mineral.php"#>{ MINERAL }</a>
+                                <br>
+                                <h2>Kimmy</h2>
                                 <a href="modelo/reporte_tuneles/read_reporte_tuneles.php"#>{ REPORTE TUNELES }</a>
                                 <a href="modelo/detalle_reporte/read_detalle_reporte.php"#>{ DETALLE REPORTE }</a>
                                 <a href="modelo/datos_tunel/read_datos_tunel.php"#>{ DATOS TUNELES }</a>
                                 <a href="modelo/tunel/read_tunel.php"#>{ TUNEL }</a>
                                 <a href="modelo/mina/read_mina.php"#>{ MINA }</a>
+                                <br>
+                                <h2>Keyla</h2>
                                 <a href=""#>{ CIUDAD }</a>
                                 <a href=""#>{ PAIS }</a>
                                 <a href=""#>{ EMPRESA }</a>
+                                <br>
+                                <h2>Yander</h2>
                                 <a href=""#>{ PERSONA }</a>
                                 <a href=""#>{ LICENCIA }</a>
                                 <a href=""#>{ DRON }</a>
