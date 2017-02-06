@@ -198,7 +198,7 @@
                                 <h2>Paul</h2>
                                 <a href="modelo/produccion/produccion.php"#>{ PRODUCCIÓN }</a>
                                 <a href="modelo/detalle_produccion/detalle_produccion.php"#>{ DETALLE DE PRODUCCIÓN }</a>
-                                <a href="modelo/mineral/mineral.php"#>{ MINERAL }</a>
+                                <a href="modelo/mineral/read_mineral.php"#>{ MINERAL }</a>
                                 <a href="modelo/reporte_tuneles/read_reporte_tuneles.php"#>{ REPORTE TUNELES }</a>
                                 <a href="modelo/detalle_reporte/read_detalle_reporte.php"#>{ DETALLE REPORTE }</a>
                                 <a href="modelo/datos_tunel/read_datos_tunel.php"#>{ DATOS TUNELES }</a>

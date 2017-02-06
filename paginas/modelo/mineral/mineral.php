@@ -1,6 +1,6 @@
 <?php
 
-class Demo
+class mineral
 {
     private $id_mineral;
     private $nombre;
@@ -9,7 +9,7 @@ class Demo
      function __construct($id_mineral, $nombre, $descripcion) {
        $this->id_mineral = $id_mineral;
        $this->nombre = $nombre;
-        $this->descripcion = $descripcion;
+       $this->descripcion = $descripcion;
      }
     
      function setid_mineral($id_mineral){
@@ -18,10 +18,10 @@ class Demo
      function getid_mineral(){
        return $this->id_mineral;
      } 
-     function setNombre($nombre){
+     function setnombre($nombre){
        $this->nombre = $nombre;
      } 
-     function getNombre(){
+     function getnombre(){
        return $this->nombre;
      } 
     
