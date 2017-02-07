@@ -2,11 +2,11 @@
 session_start();
 ?>
 <?php
-include_once("licenciaCollector.php");
+include_once("LicenciaCollector.php");
 $usuario = $_SESSION['mineria'];
 $id;
 
-$licenciaCollectorObj = new licenciaCollector();
+$LicenciaCollectorObj = new LicenciaCollector();
 
 ?>
 
@@ -39,12 +39,12 @@ $licenciaCollectorObj = new licenciaCollector();
             <th>TIPO</th>
         </tr>
         <?php
-            foreach ($licenciaCollectorObj->showLicencias() as $c){
+            foreach ($LicenciaCollectorObj->showLicencias() as $c){
             echo "<tr>";
             echo "<td>" . $c->getIdLicencia() . "</td>";
             echo "<td>" . $c->getNombre() . "</td>";             echo "<td>" . $c->getTipo() . "</td>";    
             
-            echo "<td><a href='update_licencia.php?ID=". $c->getIdLicencia() ."&NM=". $c->getNombre() ."&IE=". $c->getTipo() ."'><button>Editar</button></a></td>";
+            echo "<td><a href='update_licencia.php?ID=". $c->getIdLicencia() ."&NM=". $c->getNombre() ."&TI=". $c->getTipo() ."'><button>Editar</button></a></td>";
                 
             echo "<td><a href='delete_licencia.php?ID=". $c->getIdLicencia() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 

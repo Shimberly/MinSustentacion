@@ -2,10 +2,11 @@
 session_start();
 include_once("DronCollector.php");
 
-$marca = $_POST['nombre'];
+$id = $_POST['id_dron'];
+$marca = $_POST['marca'];
 $num_serial = $_POST['num_serial'];
 $id_empresa = $_POST['id_empresa'];
-$min_bateria = $_POST['min_bateria'];
+$minuto_bateria = $_POST['minuto_bateria'];
 
 
 $DronCollectorObj = new DronCollector();
@@ -22,8 +23,8 @@ $DronCollectorObj = new DronCollector();
     </head>
     <body>
         <?php
-        echo "<p>Se creo una nueva mina</p>";
-        $DronCollectorObj->createDron($marca,$num_serial,$id_empresa,$bateria_minutos);
+        echo "<p>Se modifico el dron</p>";
+        $DronCollectorObj->updateDron($marca,$num_serial,$id_empresa,$bateria_minutos);
         ?>
         <a href="read_dron.php"><button>VOLVER</button></a>
        

@@ -2,7 +2,9 @@
 session_start();
 include_once("LicenciaCollector.php");
 
-$id = $_GET['ID'];
+$id = $_POST['id_licencia'];
+$nombre = $_POST['nombre'];
+$tipo = $_POST['tipo'];
 
 
 $LicenciaCollectorObj = new LicenciaCollector();
@@ -19,8 +21,8 @@ $LicenciaCollectorObj = new LicenciaCollector();
     </head>
     <body>
         <?php
-        echo "<p>Se elimino la tabla #" . $id ."?</p>";
-        $LicenciaCollectorObj->deleteLicencia($id);
+        echo "<p>Se modifico una nueva mina</p>";
+        $LicenciaCollectorObj->updateLicencia($id,$nombre,$tipo);
         ?>
         <a href="read_licencia.php"><button>VOLVER</button></a>
        
