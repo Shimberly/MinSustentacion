@@ -17,7 +17,10 @@ function showPaises() {
     return $arrayPais;        
   }
 
-    
+       function createPais($nombre) {
+        $rows = self::$db->insertRow("INSERT INTO pais (nombre) VALUES ('$nombre')",null);
+        
+    }
 
   }
 ?>
