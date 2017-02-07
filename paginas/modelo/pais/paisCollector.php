@@ -6,7 +6,7 @@ include_once("../collector.php");
 class paisCollector extends collector
 {
 
-function showEmpresas() {
+function showPaises() {
     $rows = self::$db->getRows("SELECT * FROM pais");        
    
     $arrayPais= array();        

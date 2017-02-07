@@ -29,7 +29,7 @@ $paisCollectorObj = new paisCollector();
      </header>
     
     
-    <h1>TABLA Ciudad</h1>
+    <h1>TABLA Pais</h1>
     <a href="create_ciudad.php"><button>CREAR</button></a>
     <table>
         <tr>    
@@ -39,7 +39,7 @@ $paisCollectorObj = new paisCollector();
         
         </tr>
              <?php
-            foreach ($paisCollectorObj->showCiudades() as $c){
+            foreach ($paisCollectorObj->showPaises() as $c){
             echo "<tr>";
          echo "<td>" . $c->getIdPais() . "</td>";  
             echo "<td>" . $c->getNombre() . "</td>";            

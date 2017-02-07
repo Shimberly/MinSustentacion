@@ -7,8 +7,8 @@ private $idPais;
 
 
 
-  function __construct($idpais, $nombre) {
-    $this->id_pais = $idpais;
+  function __construct($idPais, $nombre) {
+    $this->idPais = $idPais;
        $this->nombre = $nombre;
      
    
@@ -24,11 +24,11 @@ function getNombre(){
        return $this->nombre;
      } 
 
- function setIdPais($idpais){
-       $this->idpais = $idpais;
+ function setIdPais($idPais){
+       $this->idPais = $idPais;
      } 
      function getIdPais(){
-       return $this->idpais;
+       return $this->idPais;
      } 
 
 }
