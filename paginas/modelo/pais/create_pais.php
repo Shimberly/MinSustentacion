@@ -29,7 +29,7 @@ $paisCollectorObj = new paisCollector();
         </div>
      </header>
     <div class="contLogin">
-                <h1>CREAR USUARIO</h1>
+                <h1>CREAR PAIS</h1>
                 <form class="login" method="post" action="save_pais.php">
                     <label >Nombre </label>
                     <input type="text" name="nombre" placeholder="Introduce el nombre del pais">

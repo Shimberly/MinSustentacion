@@ -32,15 +32,15 @@ $ciudadCollectorObj = new ciudadCollector();
      </header>
     <div class="contLogin">
                 <h1>CREAR Empresa</h1>
-                <form class="login" method="post" action="save_ciudad.php">
+                <form class="login" method="post" action="save_empresa.php">
                     <label >Razon Social </label>
                     <input type="text" name="razonSocial">
                     <br>
 		    <label >Ruc </label>
-                    <input type="text" name="Ruc" >
+                    <input type="text" name="ruc" >
                     <br>
 		    <label >Direccion </label>
-                    <input type="email" name="email" >
+                    <input type="text" name="direccion" >
                     <br>
 		    <label >Telefono</label>
                     <input type="text" name="telefono">
@@ -49,7 +49,7 @@ $ciudadCollectorObj = new ciudadCollector();
                     <label>Id_Ciudad</label>
                    
                     <?php
-                     echo "<select name='id_ciudad'>";
+                     echo "<select name='idCiudad'>";
                      foreach ($ciudadCollectorObj->showCiudades() as $c){
                         echo "<option>". $c->getIdCiudad()."</option>";
                      }

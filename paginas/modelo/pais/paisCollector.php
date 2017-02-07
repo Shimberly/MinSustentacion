@@ -22,6 +22,12 @@ function showPaises() {
         
     }
 
+   function deletePais($id) {
+        $rows = self::$db->deleteRow("DELETE FROM pais WHERE id_pais=$id",null);
+    
+    
+    }
+
   }
 ?>
 

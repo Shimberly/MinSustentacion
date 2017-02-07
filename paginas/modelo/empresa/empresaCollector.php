@@ -17,7 +17,15 @@ function showEmpresas() {
     return $arrayEmpresa;        
   }
 
+      function deleteEmpresa($id) {
+        $rows = self::$db->deleteRow("DELETE FROM empresa WHERE id_empresa=$id",null);
     
+    
+    }
+    function createEmpresa($razonSocial,$ruc,$telefono,$direccion,$idCiudad) {
+        $rows = self::$db->insertRow("INSERT INTO empresa (razonSocial,ruc,direccion,telefono,id_ciudad) VALUES ('$razonSocial', '$ruc','$direccion','$telefono','$idCiudad')",null);
+        
+    }
 
   }
 ?>

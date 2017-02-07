@@ -46,7 +46,7 @@ $ciudadCollectorObj = new ciudadCollector();
                echo "<td>" . $c->getIdPais() . "</td>";   
             echo "<td><a href='update_ciudad.php?ID=". $c->getIdCiudad() ."&NM=". $c->getNombre() ."&IE=". $c->getIdPais() ."&UB="."'><button>Editar</button></a></td>";
                 
-            echo "<td><a href='delete_mina.php?ID=". $c->getIdCiudad() ."'><button>Eliminar</button></a></td>";
+            echo "<td><a href='delete_ciudad.php?ID=". $c->getIdCiudad() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
                 
         }

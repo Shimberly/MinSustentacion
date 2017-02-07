@@ -34,9 +34,11 @@ $empresaCollectorObj = new empresaCollector();
     <table>
         <tr>    
             <th>ID</th>
-            <th>NOMBRE</th>
-            <th>ID_Pais</th>
-        
+            <th>RUC</th>
+            <th>Razon Social</th>
+        <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Ciudad</th>
         </tr>
              <?php
             foreach ($empresaCollectorObj->showEmpresas() as $c){
