@@ -208,7 +208,7 @@
                                 <a href="modelo/mina/read_mina.php"#>{ MINA }</a>
                                 <br>
                                 <h2>Keyla</h2>
-                                <a href=""#>{ CIUDAD }</a>
+                                <a href="modelo/ciudad/leerCiudad.php"#>{ CIUDAD }</a>
                                 <a href=""#>{ PAIS }</a>
                                 <a href=""#>{ EMPRESA }</a>
                                 <br>
