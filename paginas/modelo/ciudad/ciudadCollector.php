@@ -9,9 +9,9 @@ class CiudadCollector extends collector
 function showCiudades() {
     $rows = self::$db->getRows("SELECT * FROM ciudad");        
     ##echo "linea 1";
-    $arrayMina= array();        
+    $arrayCiudad= array();        
     foreach ($rows as $c){
-      $aux = new Mina($c{'id_ciudad'},$c{'nombre'},$c{'id_pais'});
+      $aux = new Ciudad($c{'id_ciudad'},$c{'nombre'},$c{'id_pais'});
       array_push($arrayCiudad, $aux);
     }
     return $arrayCiudad;        

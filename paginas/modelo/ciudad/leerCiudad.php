@@ -12,7 +12,7 @@ $ciudadCollectorObj = new ciudadCollector();
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Clase Mina</title>
+	<title>Clase Ciudad</title>
     <link rel="stylesheet" href="../estilo.css">
           
 </head>
@@ -29,7 +29,7 @@ $ciudadCollectorObj = new ciudadCollector();
      </header>
     
     
-    <h1>TABLA MINA</h1>
+    <h1>TABLA Ciudad</h1>
     <a href="create_ciudad.php"><button>CREAR</button></a>
     <table>
         <tr>    
@@ -41,13 +41,12 @@ $ciudadCollectorObj = new ciudadCollector();
              <?php
             foreach ($ciudadCollectorObj->showCiudades() as $c){
             echo "<tr>";
-            echo "<td>" . $c->getIdMina() . "</td>";
-            echo "<td>" . $c->getNombre() . "</td>";             echo "<td>" . $c->getIdEmpresa() . "</td>";   
-            echo "<td>" . $c->getUbicacion() . "</td>";   
-            
-            echo "<td><a href='update_mina.php?ID=". $c->getIdMina() ."&NM=". $c->getNombre() ."&IE=". $c->getIdEmpresa() ."&UB=". $c->getUbicacion() ."'><button>Editar</button></a></td>";
+            echo "<td>" . $c->getIdCiudad() . "</td>";
+            echo "<td>" . $c->getNombre() . "</td>";            
+               echo "<td>" . $c->getIdPais() . "</td>";   
+            echo "<td><a href='update_ciudad.php?ID=". $c->getIdCiudad() ."&NM=". $c->getNombre() ."&IE=". $c->getIdPais() ."&UB="."'><button>Editar</button></a></td>";
                 
-            echo "<td><a href='delete_mina.php?ID=". $c->getIdMina() ."'><button>Eliminar</button></a></td>";
+            echo "<td><a href='delete_mina.php?ID=". $c->getIdCiudad() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
                 
         }
