@@ -59,9 +59,11 @@ $PersonaCollectorObj = new PersonaCollector();
             echo "<td>" . $c->getIdLicencia() . "</td>";   
             echo "<td>" . $c->getFechaNacimiento() . "</td>"; 
             
-            echo "<td><a href='update_persona.php'><button>Editar</button></a></td>";
+          echo "<td><a href='update_persona.php?ID=". $c->getIdPersona() ."&NM=". $c->getNombre() ."&AP=". $c->getApellido() ."&EM=". $c->getEmail() ."&US=". $c->getUsuario() ."&PS=". $c->getClave() ."&RU=". $c->getRuc() ."&IE=". $c->getIdEmpresa() ."&IL=". $c->getIdLicencia() ."&FE=". $c->getFechaNacimiento() ."'><button>Editar</button></a></td>";
+                
             echo "<td><a href='delete_persona.php?ID=". $c->getIdPersona() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
+             
                 
         }
 

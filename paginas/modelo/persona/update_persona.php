@@ -14,7 +14,7 @@ $clave = $_GET['PS'];
 $ruc = $_GET['RU'];
 $id_empresa = $_GET['IE'];
 $id_licencia = $_GET['IL'];
-$fecha_nacimiento = $_GET['FN'];
+$fecha_nacimiento = $_GET['FE'];
 
 $PersonaCollectorObj = new PersonaCollector();
 
@@ -84,12 +84,15 @@ $PersonaCollectorObj = new PersonaCollector();
                          echo "</select>";
                     
                         echo "<br>";
-
+                        
+                     echo "<label >Fecha Nacimiento</label>";
+                        echo "<input type='text' name='fecha' value='". $fecha_nacimiento ."'>";
+                        echo "<br>";
                         
                     ?>
                     <br><br>
                     <?php
-                    echo "<a href='save_update_persona.php?ID=". $id ."'><button type='submit'>Modificar</button></a>";
+                     echo "<a href='save_update_persona.php?ID=". $id ."'><button type='submit'>Modificars</button></a>";
                     ?>
                 </form>
             </div>
