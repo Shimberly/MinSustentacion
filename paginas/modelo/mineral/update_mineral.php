@@ -4,7 +4,10 @@ session_start();
 <?php
 include_once("mineralcollector.php");
 $usuario = $_SESSION['mineria'];
-$id =1;
+
+$id_mineral = $_GET['id_mineral'];
+$nombre = $_GET['nombre'];
+$descripcion = $_GET['descripcion'];
 
 $mineralcollectorObj = new mineralcollector();
 
@@ -29,19 +32,30 @@ $mineralcollectorObj = new mineralcollector();
         </div>
      </header>
     <div class="contLogin">
-                <h1>CREAR MINERAL</h1>
-                <form class="login" method="post" action="save_mineral.php">
-                    <label >Nombre </label>
-                    <input type="text" name="nombre" placeholder="Introduce tu nombre">
+                <h1>MODIFICAR MINERAL</h1>
+                <form class="login" method="post" action="save_update_mineral.php">
+                      <?php
+                        echo "<label >Id_Mineral</label>";
 
-                    <br>
+                        echo "<input type='text' name='id_mineral' value='". $id_mineral ."' readonly>";
 
-                    <label>Descripción &nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" name="ubicacion" placeholder="Introduce la descripción del mineral">
+                        echo "<br>";
 
+                        echo "<label >Nombre </label>";
+                  
+                    
+                    
+                        echo "<input type='text' name='nombre' value='". $nombre ."'>";
+
+                        echo "<br>";
+
+                        echo "<label>Descripción &nbsp;&nbsp;&nbsp;</label>";
+                        echo "<input type='text' value='". $descripcion ."' name='descripcion'>"
+                    ?>
                     <br><br>
-                    <button type="submit">Modificar</button>
-
+                    <?php
+                    echo "<a href='save_update_mineral.php?id_mineral=". $id_mineral ."'><button type='submit'>Modificar</button></a>";
+                    ?>
                 </form>
             </div>
     </body>

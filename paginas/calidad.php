@@ -214,7 +214,7 @@
                                 <br>
                                 <h2>Yander</h2>
                                 <a href="modelo/persona/read_persona.php"#>{ PERSONA }</a>
-                                <a href=""#>{ LICENCIA }</a>
+                                <a href="modelo/licencia/read_licencia.php"#>{ LICENCIA }</a>
                                 <a href=""#>{ DRON }</a>
 								<br><br>
 							</div>

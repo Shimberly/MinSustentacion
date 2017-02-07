@@ -45,7 +45,7 @@ $mineralcollectorObj = new mineralcollector();
             echo "<td>" . $c->getnombre() . "</td>";            
             echo "<td>" . $c->getdescripcion() . "</td>";   
             
-            echo "<td><a href='update_mineral.php'><button>Editar</button></a></td>";
+            echo "<td><a href='update_mineral.php?id_mineral=" . $c->getid_mineral() . "&nombre=" . $c->getnombre() . "&descripcion=" . $c->getdescripcion() . "'><button>Editar</button></a></td>";
             echo "<td><a href='delete_mineral.php?id_mineral=". $c->getid_mineral() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
                 

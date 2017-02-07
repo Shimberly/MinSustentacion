@@ -19,7 +19,7 @@ $mineralcollectorObj = new mineralcollector();
     </head>
     <body>
         <?php
-        echo "<p>Se elimino la tabla #" . $id_mineral ."?</p>";
+        echo "<p>Se eliminó el índice #" . $id_mineral ."?</p>";
         $mineralcollectorObj->deletemineral($id_mineral);
         ?>
         <a href="read_mineral.php"><button>VOLVER</button></a>

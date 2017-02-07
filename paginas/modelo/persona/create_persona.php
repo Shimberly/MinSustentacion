@@ -49,7 +49,8 @@ $PersonaCollectorObj = new PersonaCollector();
 		    <label >Ruc </label>
                     <input type="text" name="ruc" placeholder="Introduce tu ruc">
                     <br>
-
+		
+		     
                     <label>Id_Empresa</label>
                    
                     <?php
@@ -71,7 +72,9 @@ $PersonaCollectorObj = new PersonaCollector();
                      echo "</select>";
                     ?>
                      <br>
-
+		     <label >Fecha Nacimiento </label>
+                    <input type="text" name="fecn" placeholder="Fecha/nacimiento">
+                    <br>
                     
                     <br><br>
                     <button type="submit">Crear</button>
