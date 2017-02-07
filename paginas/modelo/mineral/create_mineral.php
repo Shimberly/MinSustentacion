@@ -23,7 +23,7 @@ $mineralcollectorObj = new mineralcollector();
         <div class="usuario">
         <?php
             echo "<p>Hola usuario <span class='nmbUser'>" . $usuario . "<span> </p>";
-            echo "<a href='read_mina.php'><button>Salir</button></a>";
+            echo "<a href='read_mineral.php'><button>Salir</button></a>";
 		    
         ?>
         </div>
@@ -37,7 +37,7 @@ $mineralcollectorObj = new mineralcollector();
                     <br>
 
                     <label>Descripción &nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" name="ubicacion" placeholder="Introduce la descripción del mineral">
+                    <input type="text" name="descripcion" placeholder="Introduce la descripción del mineral">
 
                     <br><br>
                     <button type="submit">Crear</button>

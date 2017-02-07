@@ -27,5 +27,9 @@ class mineralcollector extends collector
         $rows = self::$db->insertRow("INSERT INTO mineral (nombre, descripcion) VALUES ('$nombre', '$apellido')",null);
         
     }
+    function updatemineral($id_mineral,$nombre,$descripcion) {
+        $rows = self::$db->insertRow("UPDATE mineral SET nombre='$nombre' , descripcion='$descripcion' WHERE id_mineral='$id_mineral'" ,null);
+        
+    }
 }
 ?>
