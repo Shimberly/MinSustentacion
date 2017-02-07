@@ -209,8 +209,8 @@
                                 <br>
                                 <h2>Keyla</h2>
                                 <a href="modelo/ciudad/leerCiudad.php"#>{ CIUDAD }</a>
-                                <a href=""#>{ PAIS }</a>
-                                <a href=""#>{ EMPRESA }</a>
+                                <a href="modelo/pais/leerPais.php"#>{ PAIS }</a>
+                                <a href="modelo/empresa/leerEmpresa.php"#>{ EMPRESA }</a>
                                 <br>
                                 <h2>Yander</h2>
                                 <a href="modelo/persona/read_persona.php"#>{ PERSONA }</a>
