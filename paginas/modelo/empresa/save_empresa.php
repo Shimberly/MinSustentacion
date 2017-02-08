@@ -25,7 +25,7 @@ $empresaCollectorObj = new empresaCollector();
     <body>
         <?php
         echo "<p>Se creo un  nueva Empresa </p>";
-        $empresaCollectorObj->createEmpresa($razonSocial,$telefono,$ruc,$direccion,$telefono,$idCiudad);
+$empresaCollectorObj->createEmpresa($razonSocial,$ruc,$telefono,$direccion,$idCiudad);
         ?>
         <a href="leerEmpresa.php"><button>volver</button></a>
        

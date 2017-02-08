@@ -11,7 +11,7 @@ function showEmpresas() {
    
     $arrayEmpresa= array();        
     foreach ($rows as $c){
-      $aux = new empresa($c{'id_empresa'},$c{'razonSocial'},$c{'ruc'},$c{'direccion'},$c{'telefono'},$c{'id_ciudad'});
+      $aux = new empresa($c{'id_empresa'},$c{'razonsocial'},$c{'ruc'},$c{'direccion'},$c{'telefono'},$c{'id_ciudad'});
       array_push($arrayEmpresa, $aux);
     }
     return $arrayEmpresa;        
@@ -22,10 +22,12 @@ function showEmpresas() {
     
     
     }
+
     function createEmpresa($razonSocial,$ruc,$telefono,$direccion,$idCiudad) {
-        $rows = self::$db->insertRow("INSERT INTO empresa (razonSocial,ruc,direccion,telefono,id_ciudad) VALUES ('$razonSocial', '$ruc','$direccion','$telefono','$idCiudad')",null);
-        
+$rows = self::$db->insertRow("INSERT INTO empresa (razonsocial, ruc, telefono, direccion, id_ciudad) VALUES ('$razonSocial', '$ruc','$telefono', '$direccion', '$idCiudad')",null);
     }
+
+ 
 
   }
 ?>

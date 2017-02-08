@@ -44,14 +44,14 @@ $empresaCollectorObj = new empresaCollector();
             foreach ($empresaCollectorObj->showEmpresas() as $c){
             echo "<tr>";
             echo "<td>" . $c->getIdEmpresa() . "</td>";
-echo "<td>" . $c->getRuc() . "</td>"; 
+            echo "<td>" . $c->getRuc() . "</td>"; 
             echo "<td>" . $c->getRazonSocial() . "</td>";            
-               echo "<td>" . $c->getTelefono() . "</td>"; 
-   echo "<td>" . $c->getDireccion() . "</td>"; 
- echo "<td>" . $c->getIdCiudad() . "</td>"; 
-            echo "<td><a href='update_ciudad.php?ID=". $c->getIdEmpresa() ."&NM=". $c->getRazonSocial() ."&IE=". $c->getTelefono() ."&UB=".$c->getRuc() ."&UB=".$c->getDireccion() ."&UB="."'><button>Editar</button></a></td>";
+            echo "<td>" . $c->getTelefono() . "</td>"; 
+            echo "<td>" . $c->getDireccion() . "</td>"; 
+            echo "<td>" . $c->getIdCiudad() . "</td>"; 
+            echo "<td><a href='update_empresa.php?ID=". $c->getIdEmpresa() ."&NM=". $c->getRazonSocial() ."&IE=". $c->getTelefono() ."&UB=".$c->getRuc() ."&UB=".$c->getDireccion() ."&UB="."'><button>Editar</button></a></td>";
                 
-            echo "<td><a href='delete_mina.php?ID=". $c->getIdEmpresa() ."'><button>Eliminar</button></a></td>";
+            echo "<td><a href='delete_empresa.php?ID=". $c->getIdEmpresa() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
                 
         }
