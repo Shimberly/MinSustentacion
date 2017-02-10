@@ -21,7 +21,7 @@ $ciudadcollectorObj = new ciudadCollector();
 <head>
 	<meta charset="utf-8">
 	<title>Clase Empresa </title>
-    <link rel="stylesheet" href="../estilo.css">
+    <link href="../estilo.css" rel="stylesheet">
           
 </head>
 <body>
@@ -40,7 +40,6 @@ $ciudadcollectorObj = new ciudadCollector();
                 <form class="login" method="post" action="save_update_empresa.php">
                       <?php
                         echo "<label >Id Empresa</label>";
-
                         echo "<input type='text' name='id_empresa' value='". $id ."' readonly>";
 
                         echo "<br>";
@@ -72,18 +71,16 @@ echo "<label >Ruc </label>";
 
                          echo "<select value='". $id_ciudad ."' name='id_ciudad'>";
                          foreach ($ciudadCollectorObj->showCiudades() as $c){
-                        echo "<option>". $id_ciudad->getIdCiudad()."</option>";
-                     }
-                    
-                     echo "</select>";
+                            if ($id_ciudad == $c->getIdCiudad()){
+                                echo "<option selected>". $c->getIdCiudad()."</option>";
+                            }else{   
+                                echo "<option>". $c->getIdCiudad()."</option>";
+                            }
+                         }
+                         echo "</select>";
                     ?>
-                     <br>
-                    
-              
                     <br><br>
-                    <?php
-                    echo "<a href='save_update_empresa.php?". $id ."'><button type='submit'>Modificar</button></a>";
-                    ?>
+                   
                 </form>
             </div>
     </body>
