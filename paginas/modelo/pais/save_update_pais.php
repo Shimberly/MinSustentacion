@@ -2,7 +2,9 @@
 session_start();
 include_once("paisCollector.php");
 
-$id = $_GET['ID'];
+$id = $_POST['id_pais'];
+$nombre = $_POST['nombre'];
+
 
 
 $paisCollectorObj = new paisCollector();
@@ -19,8 +21,8 @@ $paisCollectorObj = new paisCollector();
     </head>
     <body>
         <?php
-        echo "<p>Se elimino el pais #" . $id ." :c </p>";
-        $paisCollectorObj->deletePais($id);
+        echo "<p>Se modifico un nuevo pais</p>";
+        $paisCollectorObj->updatePais($id,$nombre);
         ?>
         <a href="leerPais.php"><button>VOLVER</button></a>
        

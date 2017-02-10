@@ -28,6 +28,11 @@ function showPaises() {
     
     }
 
+    function updatePais($id,$nombre) {
+        $rows = self::$db->insertRow("UPDATE pais SET nombre='$nombre'  WHERE id_pais='$id'" ,null);
+        
+    }
+
   }
 ?>
 
