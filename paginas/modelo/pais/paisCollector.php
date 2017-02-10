@@ -17,7 +17,16 @@ function showPaises() {
     return $arrayPais;        
   }
 
+       function createPais($nombre) {
+        $rows = self::$db->insertRow("INSERT INTO pais (nombre) VALUES ('$nombre')",null);
+        
+    }
+
+   function deletePais($id) {
+        $rows = self::$db->deleteRow("DELETE FROM pais WHERE id_pais=$id",null);
     
+    
+    }
 
   }
 ?>

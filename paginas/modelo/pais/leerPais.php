@@ -30,7 +30,7 @@ $paisCollectorObj = new paisCollector();
     
     
     <h1>TABLA Pais</h1>
-    <a href="create_ciudad.php"><button>CREAR</button></a>
+    <a href="create_pais.php"><button>CREAR</button></a>
     <table>
         <tr>    
             <th>ID</th>

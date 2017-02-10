@@ -1,16 +1,15 @@
 <?php
 
-class Empresa
+class empresa
 {
 private $idEmpresa;
-
-    private $razonSocial;
+private $razonSocial;
  private $ruc;
  private $direccion;
  private $telefono;
  private $id_ciudad;
 
-  function __construct($idEmpresa,$razonSocial, $ruc, $direccion, $telefono, $id_ciudad) {
+  function __construct($idEmpresa, $razonSocial, $ruc, $direccion, $telefono, $id_ciudad) {
          $this->idEmpresa = $idEmpresa;
        $this->razonSocial = $razonSocial;
  $this->ruc = $ruc;
