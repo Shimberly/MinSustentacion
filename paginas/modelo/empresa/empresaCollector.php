@@ -27,7 +27,10 @@ function showEmpresas() {
 $rows = self::$db->insertRow("INSERT INTO empresa (razonsocial, ruc, telefono, direccion, id_ciudad) VALUES ('$razonSocial', '$ruc','$telefono', '$direccion', '$idCiudad')",null);
     }
 
- 
+    function updateEmpresa($id,$razonsocial,$ruc,$direccion,$telefono,$idCiudad) {
+        $rows = self::$db->insertRow("UPDATE empresa SET razonsocial='$razonsocial' , ruc='$ruc' ,telefono= '$telefono'  ,direccion= '$direccion' ,direccion= '$idCiudad' WHERE id_empresa='$id'" ,null);
+        
+    }
 
   }
 ?>

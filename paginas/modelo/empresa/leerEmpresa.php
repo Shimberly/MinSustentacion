@@ -49,7 +49,7 @@ $empresaCollectorObj = new empresaCollector();
             echo "<td>" . $c->getTelefono() . "</td>"; 
             echo "<td>" . $c->getDireccion() . "</td>"; 
             echo "<td>" . $c->getIdCiudad() . "</td>"; 
-            echo "<td><a href='update_empresa.php?ID=". $c->getIdEmpresa() ."&NM=". $c->getRazonSocial() ."&IE=". $c->getTelefono() ."&UB=".$c->getRuc() ."&UB=".$c->getDireccion() ."&UB="."'><button>Editar</button></a></td>";
+            echo "<td><a href='update_empresa.php?ID=". $c->getIdEmpresa() ."&RS=". $c->getRazonSocial() ."&TF=". $c->getTelefono() ."&RC=".$c->getRuc() ."&DR=".$c->getDireccion() ."&IC=".$c->getIdCiudad() ."'><button>Editar</button></a></td>";
                 
             echo "<td><a href='delete_empresa.php?ID=". $c->getIdEmpresa() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 

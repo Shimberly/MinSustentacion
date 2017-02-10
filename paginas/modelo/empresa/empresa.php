@@ -3,17 +3,17 @@
 class empresa
 {
 private $idEmpresa;
-private $razonSocial;
+private $razonsocial;
  private $ruc;
  private $direccion;
  private $telefono;
  private $id_ciudad;
 
-  function __construct($idEmpresa, $razonSocial, $ruc, $direccion, $telefono, $id_ciudad) {
+  function __construct($idEmpresa, $razonsocial, $ruc, $direccion, $telefono, $id_ciudad) {
          $this->idEmpresa = $idEmpresa;
-       $this->razonSocial = $razonSocial;
- $this->ruc = $ruc;
- $this->direccion = $direccion;
+       $this->razonsocial = $razonsocial;
+       $this->ruc = $ruc;
+       $this->direccion = $direccion;
  $this->telefono = $telefono;
  $this->id_ciudad = $id_ciudad;
    
@@ -34,12 +34,12 @@ function getIdEmpresa(){
        return $this->idEmpresa;
      } 
 
-function setRazonSocial($razonSocial){
-       $this->razonSocial = $razonSocial;
+function setRazonSocial($razonsocial){
+       $this->razonsocial = $razonsocial;
      }
 
 function getRazonSocial(){
-       return $this->razonSocial;
+       return $this->razonsocial;
      } 
 
  function setRuc($ruc){

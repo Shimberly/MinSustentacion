@@ -2,7 +2,12 @@
 session_start();
 include_once("empresaCollector.php");
 
-$id = $_GET['ID'];
+$id = $_POST['id_empresa'];
+$razonsocial = $_POST['razonsocial'];
+$id_ciudad = $_POST['id_ciudad'];
+$ruc = $_POST['ruc'];
+$direccion = $_POST['direccion'];
+$telefono = $_POST['telefono'];
 
 
 $empresaCollectorObj = new empresaCollector();
@@ -19,8 +24,8 @@ $empresaCollectorObj = new empresaCollector();
     </head>
     <body>
         <?php
-        echo "<p>Se elimino la ciudad #" . $id ." :c </p>";
-        $empresaCollectorObj->deleteEmpresa($id);
+        echo "<p>Se modifico una nueva empresa</p>";
+        $empresaCollectorObj->updateEmpresa($idEmpresa,$razonsocial,$ruc,$direccion,$telefono,$id_ciudad);
         ?>
         <a href="leerEmpresa.php"><button>VOLVER</button></a>
        
