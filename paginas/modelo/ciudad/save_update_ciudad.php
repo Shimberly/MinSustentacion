@@ -2,7 +2,10 @@
 session_start();
 include_once("ciudadCollector.php");
 
-$id = $_GET['ID'];
+$id = $_POST['id_ciudad'];
+$nombre = $_POST['nombre'];
+$id_pais = $_POST['id_pais'];
+
 
 
 $ciudadCollectorObj = new ciudadCollector();
@@ -19,8 +22,8 @@ $ciudadCollectorObj = new ciudadCollector();
     </head>
     <body>
         <?php
-        echo "<p>Se elimino la ciudad #" . $id ." :c </p>";
-        $ciudadCollectorObj->deleteCiudad($id);
+        echo "<p>Se modifico una nueva Ciudad</p>";
+        $ciudadCollectorObj->updateCiudad($id,$nombre,$id_pais);
         ?>
         <a href="leerCiudad.php"><button>VOLVER</button></a>
        

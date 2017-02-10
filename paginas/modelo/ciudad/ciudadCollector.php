@@ -8,7 +8,7 @@ class CiudadCollector extends collector
 
 function showCiudades() {
     $rows = self::$db->getRows("SELECT * FROM ciudad");        
-    ##echo "linea 1";
+ 
     $arrayCiudad= array();        
     foreach ($rows as $c){
       $aux = new Ciudad($c{'id_ciudad'},$c{'nombre'},$c{'id_pais'});
@@ -29,7 +29,7 @@ function showCiudades() {
     }
     
      function updateCiudad($id,$nombre,$id_pais) {
-        $rows = self::$db->insertRow("UPDATE ciudad SET nombre='$nombre' , id_ciudad='$id_ciudad' WHERE id_ciudad='$id'" ,null);
+        $rows = self::$db->insertRow("UPDATE ciudad SET nombre='$nombre' , id_pais='$id_pais' WHERE id_ciudad='$id'" ,null);
         
     }
 
