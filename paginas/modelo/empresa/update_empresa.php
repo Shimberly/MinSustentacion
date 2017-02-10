@@ -55,12 +55,12 @@ $ciudadcollectorObj = new ciudadCollector();
 
                         echo "<br>";
 
-                        echo "<label >Direccion </label>";
+                        echo "<label> Direccion </label>";
           
                         echo "<input type='text' name='direccion' value='". $direccion ."'>";
 
                         echo "<br>";
-echo "<label >Ruc </label>";
+                        echo "<label >Ruc </label>";
           
                         echo "<input type='text' name='ruc' value='". $ruc ."'>";
 
@@ -69,7 +69,7 @@ echo "<label >Ruc </label>";
                         echo "<label>Id Ciudad</label>";
 
 
-                         echo "<select value='". $id_ciudad ."' name='id_ciudad'>";
+                         echo "<select value=". $id_ciudad ." name='id_ciudad'>";
                          foreach ($ciudadCollectorObj->showCiudades() as $c){
                             if ($id_ciudad == $c->getIdCiudad()){
                                 echo "<option selected>". $c->getIdCiudad()."</option>";
