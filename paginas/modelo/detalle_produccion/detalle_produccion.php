@@ -33,7 +33,7 @@ class detalle_produccion
      function getid_mineral(){
        return $this->id_mineral;
      } 
-    function setid_mineral($peso){
+    function setpeso($peso){
        $this->peso = $peso;
      } 
      function getpeso(){
