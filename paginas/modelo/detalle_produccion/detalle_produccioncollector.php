@@ -11,7 +11,7 @@ class detalle_produccioncollector extends collector
     ##echo "linea 1";
     $arraydetalle_produccion= array();        
     foreach ($rows as $c){
-      $aux = new detalle_produccion($c{'id_detalle_produccion'},$c{'id_produccion'},$c{'id_mineral'},$c{'peso'});
+      $aux = new detalle_produccion($c{'id_detalle'},$c{'id_produccion'},$c{'id_mineral'},$c{'peso'});
       array_push($arraydetalle_produccion, $aux);
     }
     return $arraydetalle_produccion;        
@@ -23,11 +23,11 @@ class detalle_produccioncollector extends collector
     
     }
    
-    function createdetalle_produccion($id_produccion,$id_produccion,$id_mineral,$peso) {
-        $rows = self::$db->insertRow("INSERT INTO detalle_produccion (id_produccion, id_mineral, peso) VALUES ('$id_produccion', '$id_produccion','$peso')",null);
+    function createdetalle_produccion($id_produccion,$id_mineral,$peso) {
+        $rows = self::$db->insertRow("INSERT INTO detalle_produccion (id_produccion, id_mineral, peso) VALUES ('$id_produccion', '$id_mineral','$peso')",null);
         
     }
-    function updatedetalle_produccion($id_detalle_produccion,$id_produccion,$id_mineral) {
+    function updatedetalle_produccion($id_detalle_produccion,$id_produccion,$id_mineral, $peso) {
         $rows = self::$db->insertRow("UPDATE detalle_produccion SET id_produccion='$id_produccion' , id_mineral='$id_mineral', peso='$peso' WHERE id_detalle_produccion='$id_detalle_produccion'" ,null);
         
     }

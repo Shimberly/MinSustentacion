@@ -42,10 +42,11 @@ $detalle_produccioncollectorObj = new detalle_produccioncollector();
             foreach ($detalle_produccioncollectorObj->showdetalle_produccion() as $c){
             echo "<tr>";
             echo "<td>" . $c->getid_detalle_produccion() . "</td>";
-            echo "<td>" . $c->getnombre() . "</td>";            
-            echo "<td>" . $c->getdescripcion() . "</td>";   
+            echo "<td>" . $c->getid_produccion() . "</td>";            
+            echo "<td>" . $c->getid_mineral() . "</td>";
+            echo "<td>" . $c->getpeso() . "</td>";
             
-            echo "<td><a href='update_detalle_produccion.php?id_detalle_produccion=" . $c->getid_detalle_produccion() . "&nombre=" . $c->getnombre() . "&descripcion=" . $c->getdescripcion() . "'><button>Editar</button></a></td>";
+            echo "<td><a href='update_detalle_produccion.php?id_detalle_produccion=" . $c->getid_detalle_produccion() . "&nombre=" . $c->getid_produccion() . "&descripcion=" . $c->getid_mineral() . "'><button>Editar</button></a></td>";
             echo "<td><a href='delete_detalle_produccion.php?id_detalle_produccion=". $c->getid_detalle_produccion() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
                 
