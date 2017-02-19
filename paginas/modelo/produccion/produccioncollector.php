@@ -24,7 +24,7 @@ class produccioncollector extends collector
     }
    
     function createproduccion($fecha,$id_empresa) {
-        $rows = self::$db->insertRow("INSERT INTO produccion (fecha, id_empresa) VALUES ('$fecha', '$apellido')",null);
+        $rows = self::$db->insertRow("INSERT INTO produccion (fecha, id_empresa) VALUES ('$fecha', '$id_empresa')",null);
         
     }
     function updateproduccion($id_produccion,$fecha,$id_empresa) {

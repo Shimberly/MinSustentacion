@@ -21,7 +21,7 @@ $produccioncollectorObj = new produccioncollector();
     <body>
         <?php
         echo "<p>Se creo un nuevo produccion</p>";
-        $produccioncollectorObj->createproduccion($fecha,id_empresa);
+        $produccioncollectorObj->createproduccion($fecha,$id_empresa);
         ?>
         <a href="read_produccion.php"><button>VOLVER</button></a>
        
