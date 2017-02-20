@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
-<title>Mineria PKYK</title>
+<title>Mineria-Calidad-Mensual</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -84,8 +84,8 @@
                             <div class="collapse navbar-collapse" id="haml">
                                 <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
                                       <li class="active"><a href="#vtab1" data-toggle="tab">Calidad de Aire</a></li>
-                                      <li><a href="#vtab2" data-toggle="tab">Producción</a></li>
-                                      <li><a href="#vtab3" data-toggle="tab">Galería</a></li>
+                                      <li><a href="produccion.php">Producción</a></li>
+                                      <li><a href="galeria.php">Galería</a></li>
                                 </ul>
                             </div>   
                     
@@ -94,6 +94,54 @@
                         <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
                                     <h3>Calidad de Aire</h3>
+                                    <div class="row">
+                                        <div class="col-md-6 ">
+                                           <div style="background-color:#e0e0eb; text-align:center">
+                                                
+                                                <p>Desde</p>
+                                               <p>Mes</p>
+                                               <select>
+                                                  <option value="01">Enero</option>
+                                                  <option value="02">Febrero</option>
+                                                  <option value="03">Marzo</option>
+                                                  <option value="04">Abril</option>
+                                                  <option value="05">Mayo</option>
+                                                  <option value="06">Junio</option>
+                                                  <option value="07">Julio</option>
+                                                  <option value="08">Agosto</option>
+                                                  <option value="09">Septiembre</option>
+                                                  <option value="10">Octubre</option>
+                                                  <option value="11">Noviembre</option>
+                                                  <option value="12">Diciembre</option>   
+                                                </select>
+                                                
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <div style="background-color:#b3b3b3; text-align:center">
+                                                
+                                                <p>Hasta</p> 
+                                                <p>Mes</p>
+                                               <select>
+                                                  <option value="01">Enero</option>
+                                                  <option value="02">Febrero</option>
+                                                  <option value="03">Marzo</option>
+                                                  <option value="04">Abril</option>
+                                                  <option value="05">Mayo</option>
+                                                  <option value="06">Junio</option>
+                                                  <option value="07">Julio</option>
+                                                  <option value="08">Agosto</option>
+                                                  <option value="09">Septiembre</option>
+                                                  <option value="10">Octubre</option>
+                                                  <option value="11">Noviembre</option>
+                                                  <option value="12">Diciembre</option>   
+                                                </select>
+                                                
+                                            </div>
+
+                                        </div>
+                                    </div>
                                     <script type="text/javascript">
 						$(function () {
 						    $(document).ready(function () {
@@ -177,19 +225,19 @@
 					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 						<div class="row">
 						<div class="col-md-6 ">
-							<div style="background-color:#e0e0eb; text-align:center">
+							<a href="calidadMensual.php"><div style="background-color:#e0e0eb; text-align:center">
 								<br><br>
-								<p>Mensual</p> 
+								<p>Mensual</p>
 								<br><br>
-							</div>
+							</div></a>
 	
 						</div>
 						<div class="col-md-6 ">
-							<div style="background-color:#b3b3b3; text-align:center">
+							<a href="calidadAnual.php"><div style="background-color:#b3b3b3; text-align:center">
 								<br><br>
 								<p>Anual</p> 
 								<br><br>
-							</div>
+							</div></a>
 	
 						</div>
                             <div class="col-md-12 ">
@@ -224,61 +272,15 @@
 						</div>
 
                                 </div>
-
-
-                                <div role="tabpanel" class="tab-pane fade" id="vtab2">
-                                	<h3>Producción</h3>
-						<div class="col-md-12 ">
-							<div>
-								<img alt="barra" class="img-responsive" src="../imagenes/barrascontinuo.png">
-							</div>
-	
-						</div>
-
-
-
-                                </div>
-			
-                    <div role="tabpanel" class="tab-pane fade" id="vtab3">
-                                    <h3>Galería</h3>
-                                    	
-                                    
-                                
-                   
-						<div class="col-md-1 ">
-							
-								<img alt="mina1" class="img-responsive" src="../imagenes/mina1.jpg">
-							
-						</div>
-						<div class="col-md-1 ">
-							
-								<img alt="mina2" class="img-responsive" src="../imagenes/mina2.jpg">
-						
-						</div>
-						<div class="col-md-1 ">
-							
-								<img alt="mina3" class="img-responsive" src="../imagenes/mina3.jpg">
-							
-						</div>
-                        <div class="col-md-1 ">
-							
-								<img alt="mina4" class="img-responsive" src="../imagenes/mina4.jpeg">
-							
-					</div>
-                   
-                 </div>
+              
                 </div>
                 </div>
                     
             </div>
             
-                      <br>
-<br>  
-         <br>
-<br>
+    
             
-            
-      <div class="container hidden-xs">
+      <div class="container">
             <div id="margen">
                  
                
@@ -300,7 +302,7 @@
             
         
     </div>
-    </div>
+
         
 <script src="../js/j3.js"></script>
     <script src="../js/bootstrap.js"></script>

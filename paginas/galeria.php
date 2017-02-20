@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
-<title>Mineria PKYK</title>
+<title>Mineria-Galeria</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -83,9 +83,9 @@
 			    </div>
                             <div class="collapse navbar-collapse" id="haml">
                                 <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
-                                      <li class="active"><a href="#vtab1" data-toggle="tab">Calidad de Aire</a></li>
-                                      <li><a href="#vtab2" data-toggle="tab">Producción</a></li>
-                                      <li><a href="#vtab3" data-toggle="tab">Galería</a></li>
+                                      <li><a href="calidad.php" >Calidad de Aire</a></li>
+                                      <li><a href="produccion.php">Producción</a></li>
+                                      <li class="active"><a href="#vtab1" data-toggle="tab">Galería</a></li>
                                 </ul>
                             </div>   
                     
@@ -93,103 +93,46 @@
                     <div class="col-sm-9">
                         <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
-                                    <h3>Calidad de Aire</h3>
-                                    <script type="text/javascript">
-						$(function () {
-						    $(document).ready(function () {
-							Highcharts.setOptions({
-							    global: {
-								useUTC: false
-							    }
-							});
-
-							Highcharts.chart('container', {
-							    chart: {
-								type: 'spline',
-								animation: Highcharts.svg, // don't animate in old IE
-								marginRight: 10,
-								events: {
-								    load: function () {
-
-									// set up the updating of the chart each second
-									var series = this.series[0];
-									setInterval(function () {
-									    var x = (new Date()).getTime(), // current time
-										y = Math.random();
-									    series.addPoint([x, y], true, true);
-									}, 1000);
-								    }
-								}
-							    },
-							    title: {
-								text: 'Live random data'
-							    },
-							    xAxis: {
-								type: 'datetime',
-								tickPixelInterval: 150
-							    },
-							    yAxis: {
-								title: {
-								    text: 'Value'
-								},
-								plotLines: [{
-								    value: 0,
-								    width: 1,
-								    color: '#808080'
-								}]
-							    },
-							    tooltip: {
-								formatter: function () {
-								    return '<b>' + this.series.name + '</b><br/>' +
-									Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
-									Highcharts.numberFormat(this.y, 2);
-								}
-							    },
-							    legend: {
-								enabled: false
-							    },
-							    exporting: {
-								enabled: false
-							    },
-							    series: [{
-								name: 'Random data',
-								data: (function () {
-								    // generate an array of random data
-								    var data = [],
-									time = (new Date()).getTime(),
-									i;
-
-								    for (i = -19; i <= 0; i += 1) {
-									data.push({
-									    x: time + i * 1000,
-									    y: Math.random()
-									});
-								    }
-								    return data;
-								}())
-							    }]
-							});
-						    });
-						});
-					</script>
+                                    <h3>Galería</h3>
+                                    	
+                                    
+                                
+                   
+						<div class="col-md-4 ">
+							
+								<img alt="mina1" class="img-responsive" src="../imagenes/mina1.jpg">
+							
+						</div>
+						<div class="col-md-4 ">
+							
+								<img alt="mina2" class="img-responsive" src="../imagenes/mina2.jpg">
+						
+						</div>
+						<div class="col-md-4 ">
+							
+								<img alt="mina3" class="img-responsive" src="../imagenes/mina3.jpg">
+							
+						</div>
+                        
+                   
 
 
 					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 						<div class="row">
 						<div class="col-md-6 ">
-							<div style="background-color:#e0e0eb; text-align:center">
+							<a href="calidadMensual.php"><div style="background-color:#e0e0eb; text-align:center">
 								<br><br>
-								<p>Mensual</p> 
+								<p>Mensual</p>
 								<br><br>
-							</div>
+							</div></a>
 	
 						</div>
 						<div class="col-md-6 ">
-							<div style="background-color:#b3b3b3; text-align:center">
+							<a href="calidadAnual.php"><div style="background-color:#b3b3b3; text-align:center">
 								<br><br>
 								<p>Anual</p> 
 								<br><br>
-							</div>
+							</div></a>
 	
 						</div>
                             <div class="col-md-12 ">
@@ -239,34 +182,7 @@
 
                                 </div>
 			
-                    <div role="tabpanel" class="tab-pane fade" id="vtab3">
-                                    <h3>Galería</h3>
-                                    	
-                                    
-                                
-                   
-						<div class="col-md-1 ">
-							
-								<img alt="mina1" class="img-responsive" src="../imagenes/mina1.jpg">
-							
-						</div>
-						<div class="col-md-1 ">
-							
-								<img alt="mina2" class="img-responsive" src="../imagenes/mina2.jpg">
-						
-						</div>
-						<div class="col-md-1 ">
-							
-								<img alt="mina3" class="img-responsive" src="../imagenes/mina3.jpg">
-							
-						</div>
-                        <div class="col-md-1 ">
-							
-								<img alt="mina4" class="img-responsive" src="../imagenes/mina4.jpeg">
-							
-					</div>
-                   
-                 </div>
+                    
                 </div>
                 </div>
                     
@@ -300,7 +216,7 @@
             
         
     </div>
-    </div>
+
         
 <script src="../js/j3.js"></script>
     <script src="../js/bootstrap.js"></script>

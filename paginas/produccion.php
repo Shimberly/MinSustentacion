@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
-<title>Mineria-Calidad</title>
+<title>Mineria-Producción</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -83,8 +83,8 @@
 			    </div>
                             <div class="collapse navbar-collapse" id="haml">
                                 <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
-                                      <li class="active"><a href="#vtab1" data-toggle="tab">Calidad de Aire</a></li>
-                                      <li><a href="produccion.php">Producción</a></li>
+                                      <li><a href="calidad.php">Calidad de Aire</a></li>
+                                      <li class="active"><a href="#vtab1" data-toggle="tab">Producción</a></li>
                                       <li><a href="galeria.php">Galería</a></li>
                                 </ul>
                             </div>   
@@ -93,85 +93,12 @@
                     <div class="col-sm-9">
                         <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
-                                    <h3>Calidad de Aire</h3>
-                                    <script type="text/javascript">
-						$(function () {
-						    $(document).ready(function () {
-							Highcharts.setOptions({
-							    global: {
-								useUTC: false
-							    }
-							});
-
-							Highcharts.chart('container', {
-							    chart: {
-								type: 'spline',
-								animation: Highcharts.svg, // don't animate in old IE
-								marginRight: 10,
-								events: {
-								    load: function () {
-
-									// set up the updating of the chart each second
-									var series = this.series[0];
-									setInterval(function () {
-									    var x = (new Date()).getTime(), // current time
-										y = Math.random();
-									    series.addPoint([x, y], true, true);
-									}, 1000);
-								    }
-								}
-							    },
-							    title: {
-								text: 'Live random data'
-							    },
-							    xAxis: {
-								type: 'datetime',
-								tickPixelInterval: 150
-							    },
-							    yAxis: {
-								title: {
-								    text: 'Value'
-								},
-								plotLines: [{
-								    value: 0,
-								    width: 1,
-								    color: '#808080'
-								}]
-							    },
-							    tooltip: {
-								formatter: function () {
-								    return '<b>' + this.series.name + '</b><br/>' +
-									Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
-									Highcharts.numberFormat(this.y, 2);
-								}
-							    },
-							    legend: {
-								enabled: false
-							    },
-							    exporting: {
-								enabled: false
-							    },
-							    series: [{
-								name: 'Random data',
-								data: (function () {
-								    // generate an array of random data
-								    var data = [],
-									time = (new Date()).getTime(),
-									i;
-
-								    for (i = -19; i <= 0; i += 1) {
-									data.push({
-									    x: time + i * 1000,
-									    y: Math.random()
-									});
-								    }
-								    return data;
-								}())
-							    }]
-							});
-						    });
-						});
-					</script>
+                                    <h3>Producción</h3>
+						<div class="col-md-12 ">
+							<div>
+								<img alt="barra" class="img-responsive" src="../imagenes/barrascontinuo.png">
+							</div>
+                                    </div>
 
 
 					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
@@ -224,15 +151,33 @@
 						</div>
 
                                 </div>
-              
+
+
+                                <div role="tabpanel" class="tab-pane fade" id="vtab2">
+                                	<h3>Producción</h3>
+						<div class="col-md-12 ">
+							<div>
+								<img alt="barra" class="img-responsive" src="../imagenes/barrascontinuo.png">
+							</div>
+	
+						</div>
+
+
+
+                                </div>
+			
                 </div>
                 </div>
                     
             </div>
             
-    
+                      <br>
+<br>  
+         <br>
+<br>
             
-      <div class="container">
+            
+      <div class="container hidden-xs">
             <div id="margen">
                  
                
