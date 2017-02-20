@@ -23,8 +23,8 @@ class mineralcollector extends collector
     
     }
    
-    function createmineral($nombre,$apellido) {
-        $rows = self::$db->insertRow("INSERT INTO mineral (nombre, descripcion) VALUES ('$nombre', '$apellido')",null);
+    function createmineral($nombre,$descripcion) {
+        $rows = self::$db->insertRow("INSERT INTO mineral (nombre, descripcion) VALUES ('$nombre', '$descripcion')",null);
         
     }
     function updatemineral($id_mineral,$nombre,$descripcion) {
