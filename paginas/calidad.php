@@ -76,20 +76,23 @@
             <div class="container ">
                 <div class="row">
                     <div class="col-sm-3">
-			    <div style="text-align:center;">
-				<h1> Mineria UC </h1>
-				<img alt="logo" class="img-responsive" src="../imagenes/logoCompañiaMinera.png" >
-					
-			    </div>
-                            <div class="collapse navbar-collapse" id="haml">
-                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
-                                      <li class="active"><a href="#vtab1" data-toggle="tab">Calidad de Aire</a></li>
-                                      <li><a href="produccion.php">Producción</a></li>
-                                      <li><a href="galeria.php">Galería</a></li>
-                                </ul>
-                            </div>   
+                            <div style="text-align:center;">
+                            <h1> Mineria UC </h1>
+                            <img alt="logo" class="img-responsive" src="../imagenes/logoCompañiaMinera.png" >
+
+                            </div>
+                                <div class="collapse navbar-collapse" >
+                                    
+                                    <ul class="menuCalidad">
+                                      <li><a class="active" href="#home">Home</a></li>
+                                      <li><a href="#news">News</a></li>
+                                      <li><a href="#contact">Contact</a></li>
+                                      <li><a href="#about">About</a></li>
+                                    </ul>
+                                </div>   
                     
                     </div>
+                   
                     <div class="col-sm-9">
                         <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
