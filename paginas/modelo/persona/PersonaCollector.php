@@ -1,7 +1,7 @@
 <?php
 
 include_once('Persona.php');
-include_once("../collector.php");
+include_once("/var/www/html/ProyectoPSW2016Mineria/paginas/modelo/collector.php");
 
 class PersonaCollector extends collector
 {

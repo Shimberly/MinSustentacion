@@ -16,12 +16,10 @@ session_start();
 
         if (isset($_SESSION['mineria'])){
                 session_destroy();
-                
-                echo "<br><a href='../index.php'><button>Volver<button></a>";
+               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
         }else{
-                echo "Error";
-                echo "<a href='index.php'><button>Volver<button></a>";
-
+                
+              
         }
 
 	?>

@@ -1,34 +1,40 @@
 <?php
+include_once("modelo/persona/PersonaCollector.php");
 session_start();
-include_once("var/html/www/ProyectoPSW2016Mineria/paginas/modelo/persona/PersonaCollector.php");
+$email = $_POST['email'];
+$clave = $_POST['clave'];
+
+$PersonaCollectorObj = new PersonaCollector();
+
 ?>
 <!DOCTYPE html>
 
 <html>
     <head>
         <title>Login</title>
+        <meta charset="utf-8">
     </head>
     <body>
-        <p>Validando ...</p>
+       
         <?php
-		$email = $_POST['email'];
-		$clave = $_POST['clave'];
-        $existe = 0;
-        
-        $PersonaCollectorObj = new PersonaCollector();
-        echo "<p>Buscando</p>";
+
         foreach ($PersonaCollectorObj->showPersonas() as $c){
             if($c->getEmail() == $email && $c->getClave() == $clave){
-                echo "<p>Encontreeee </p>";
-                $existe = 1;
+               
                 $_SESSION['mineria']= $email;
-		          //if (isset($_SESSION['mineria'])){
-                    //echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=calidad.php'>";
-                    
-                 // }
-            }else{
-                echo "<p>No encontre :c </p>";
+		        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=calidad.php'>";
+                
             }
+        }
+        if (!isset($_SESSION['mineria'])){
+        ?>
+            
+            <h4>Usuario o contraseña incorrecta</h4>
+            <a href="login.php"><button class="boton">Regresar</button></a>
+                
+        
+        <?php
+             
         }
 		
 	   ?>
