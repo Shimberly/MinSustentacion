@@ -16,7 +16,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <body>
-
+         <?php
+		                  if (isset($_SESSION['mineria'])){
+            ?>
         <div class="container">
         <br>
       <header>
@@ -36,9 +38,7 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                  <?php
-		                  if (isset($_SESSION['mineria'])){
-                        ?>
+                 
                <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php
                     echo "Hola " .$_SESSION['mineria']
                     ?><span class="caret"></span></a>
@@ -47,14 +47,7 @@
                                 <li><a href="logout.php">Salir</a></li>
                             </ul>
                         </li>
-                        <?php
-                          }else{    
-                        ?>
-                             <li class="page-scroll"><a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
-                                 </li>
-                             <?php
-                          } 
-                        ?>
+                       
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -270,6 +263,10 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>	
     <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-      
+       <?php
+                          }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+                             } 
+                        ?>
     </body>
  </html>
