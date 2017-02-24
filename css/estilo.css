@@ -3,24 +3,24 @@
     cursor: default;
 }
 table{
-    border-collapse: collapse;
-    border: aquamarine 5px solid;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;   width: 100%;  text-align: left;    border-collapse: collapse; text-align: center;
    
 }
 h1{
     margin-left: 20px;
 }
 td{
-    margin: 10px;
-    padding: 10px;
+     padding: 18px;     background: #e8edff;     border-bottom: 1px solid #fff;
+    color: #669;    border-top: 1px solid transparent; 
      
 }
 tr{
-    border: black 1px solid;
+    border: black 1px solid; text-align: center;
 }
 th{
-    padding: 3px;
-    background-color: aquamarine;
+      font-size: 13px;     font-weight: normal;     padding: 8px;     background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; color: #039; text-align: center;
 }
 
 td:hover{
@@ -72,3 +72,35 @@ h1{
     margin: auto;
     text-align: center;
 }
+
+@media (max-width:1200px) {
+        .FN{
+                display:none;
+        }
+
+}
+@media (max-width:1024px) {
+        .FN, .LI, .IE{
+                display:none;
+        }
+
+}
+
+@media (max-width:768px) {
+        .FN,.LI,.IE,.IP,.EM{
+                display:none;
+        }
+
+}
+
+@media (max-width:500px) {
+        .FN, .LI, .EM, .NO, .AP, .IE, .RU,IP{
+                display:none;
+        }
+
+}
+.crear{
+    float: right;
+}
+
+h1{float: left}

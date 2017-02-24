@@ -66,7 +66,7 @@
                         <?php
                           }else{    
                         ?>
-                             <li class="page-scroll"><a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                             <li class="page-scroll"><a  href="login.php"><img class="img-responsive" src="../imagenes/3.png" width="80" height="35" alt="login" ></a>
                                  </li>
                              <?php
                           } 
