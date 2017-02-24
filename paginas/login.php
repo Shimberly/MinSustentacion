@@ -1,5 +1,7 @@
 <?php
 	session_start();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +21,7 @@
 <body>
      <?php
 		  if (!isset($_SESSION['mineria'])){
-              $_SESSION['mineria']= $email;
+              $_SESSION['mineria']= "asdasd";
     ?>
         <div class="container">
         <br>
