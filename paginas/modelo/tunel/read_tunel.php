@@ -75,6 +75,7 @@ $TunelCollectorObj = new TunelCollector();
             <th>EXTENSION</th>
             <th>NUMERO FRENTE</th>
             <th>ID_MINA</th>
+	<th>NOMBRE</th>
             <th></th>
             <th></th>
         </tr>
@@ -83,9 +84,9 @@ $TunelCollectorObj = new TunelCollector();
             echo "<tr>";
             echo "<td>" . $c->getIdTunel() . "</td>";
             echo "<td>" . $c->getExtension() . "</td>";             echo "<td>" . $c->getNumFrente() . "</td>";   
-            echo "<td>" . $c->getIdMina() . "</td>";   
+            echo "<td>" . $c->getIdMina() . "</td>";   echo "<td>" . $c->getNombre() . "</td>";   
             
-            echo "<td><a href='update_tunel.php?ID=". $c->getIdTunel() ."&EX=". $c->getExtension() ."&NF=". $c->getNumFrente() ."&IM=". $c->getIdMina() ."'><button>Editar</button></a></td>";
+            echo "<td><a href='update_tunel.php?ID=". $c->getIdTunel() ."&EX=". $c->getExtension() ."&NF=". $c->getNumFrente() ."&IM=". $c->getIdMina() ."&NO=". $c->getNombre()."'><button>Editar</button></a></td>";
                 
             echo "<td><a href='delete_tunel.php?ID=". $c->getIdTunel() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 

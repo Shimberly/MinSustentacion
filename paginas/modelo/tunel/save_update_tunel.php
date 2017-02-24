@@ -7,6 +7,7 @@ $extension = $_POST['extension'];
 $id_mina = $_POST['id_mina'];
 $num_frente = $_POST['num_frente'];
 
+$nombre = $_POST['nombre'];
 
 $TunelCollectorObj = new TunelCollector();
 ?>
@@ -24,7 +25,7 @@ $TunelCollectorObj = new TunelCollector();
                  <?php
 		  if (isset($_SESSION['mineria'])){
         echo "<p>Se modifico una nueva Tunel</p>";
-        $TunelCollectorObj->updateTunel($id,$extension,$num_frente,$id_mina);
+        $TunelCollectorObj->updateTunel($id,$extension,$num_frente,$id_mina,$nombre);
        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_tunel.php'>";
                             }else{   
                                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
