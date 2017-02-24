@@ -3,9 +3,6 @@ session_start();
 ?>
 <?php
 include_once("LicenciaCollector.php");
-$usuario = $_SESSION['mineria'];
-$id =1;
-
 $licenciaCollectorObj = new licenciaCollector();
 
 ?>

@@ -16,17 +16,19 @@ $MinaCollectorObj = new MinaCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+       
     </head>
     <body>
-        <?php
+         <?php
+		  if (isset($_SESSION['mineria'])){
         echo "<p>Se modifico una nueva mina</p>";
         $MinaCollectorObj->updateMina($id,$nombre,$id_empresa,$ubicacion);
-        ?>
-        <a href="read_mina.php"><button>VOLVER</button></a>
-       
+       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_mina.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
+  
   
     </body>
 </html>
