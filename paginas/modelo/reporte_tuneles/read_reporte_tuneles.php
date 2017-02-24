@@ -64,7 +64,7 @@ $ReporteTunelesCollectorObj = new ReporteTunelesCollector();
           
             <h1>TABLA REPORTE TUNELES</h1>
            <br> 
-            <a href="create_ReporteTuneles.php"><button class="crear">CREAR</button></a>
+            <a href="create_reporte_tuneles.php"><button class="crear">CREAR</button></a>
             <table>
                 <tr>    
                     <th class='IP'>ID</th>
@@ -81,9 +81,9 @@ $ReporteTunelesCollectorObj = new ReporteTunelesCollector();
                     echo "<td class='NO'>" . $c->getId_empresa() . "</td>";             
                     echo "<td class='AP'>" . $c->getFecha() . "</td>";   
                    
-                  echo "<td><a href='update_reporteTuneles.php?ID=". $c->getId_reporte() ."&NM=". $c->getId_empresa() ."&AP=". $c->getFecha() ."'><button>Editar</button></a></td>";
+                  echo "<td><a href='update_reporte_tuneles.php?ID=". $c->getId_reporte() ."&NM=". $c->getId_empresa() ."&AP=". $c->getFecha() ."'><button>Editar</button></a></td>";
 
-                    echo "<td><a href='delete_reporteTuneles.php?ID=". $c->getId_reporte() ."'><button>Eliminar</button></a></td>";
+                    echo "<td><a href='delete_reporte_tuneles.php?ID=". $c->getId_reporte() ."'><button>Eliminar</button></a></td>";
                     echo "</tr>"; 
 
 

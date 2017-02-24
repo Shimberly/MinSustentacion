@@ -1,19 +1,13 @@
 <?php
 session_start();
-include_once("PersonaCollector.php");
+include_once("ReporteTunelesCollector.php");
 
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$email = $_POST['email'];
-$usuario = $_POST['usuario'];
-$clave = $_POST['clave'];
-$ruc = $_POST['ruc'];
 $id_empresa = $_POST['id_empresa'];
-$id_licencia = $_POST['id_licencia'];
-$fecha_nacimiento = $_POST['fecha_nacimiento'];
+$fecha = $_POST['fecha'];
 
 
-$PersonaCollectorObj = new PersonaCollector();
+
+$ReporteTunelesCollectorObj = new ReporteTunelesCollector();
 ?>
 
 <!DOCTYPE html>
@@ -21,17 +15,19 @@ $PersonaCollectorObj = new PersonaCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+      
     </head>
     <body>
-        <?php
-        echo "<p>Se creo un  nuevo usuario </p>";
-        $PersonaCollectorObj->createPersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento);
-        ?>
-        <a href="read_persona.php"><button>VOLVER</button></a>
+         <?php
+		  if (isset($_SESSION['mineria'])){
+        echo "<p>Se creo un  nuevo reporte </p>";
+        $ReporteTunelesCollectorObj->createReporteTuneles($id_empresa,$fecha);
        
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_reporte_tuneles.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>
