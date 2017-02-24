@@ -27,9 +27,9 @@ class DetalleReporteCollector extends collector
         
     }
     
-     function updateDetalleReporte($id_dron,$id_tunel,$id_reporte,$id_datos_tunel) {
-        $rows = self::$db->insertRow("INSERT INTO detalle_reporte (id_dron,id_tunel,id_reporte,id_datos_tunel) VALUES ('$id_dron', '$id_tunel','$id_reporte','$id_datos_tunel')",null);
-        
+     function updateDetalleReporte($id_detalle,$id_dron,$id_tunel,$id_reporte,$id_datos_tunel) {
+       
+         $rows = self::$db->insertRow("UPDATE detalle_reporte SET id_dron='$id_dron' , id_tunel='$id_tunel' , id_reporte='$id_reporte' , id_datos_tunel='$id_datos_tunel' WHERE id_detalle_reporte='$id_detalle'" ,null);
     }
 }
 ?>

@@ -69,9 +69,10 @@ $detalle_produccioncollectorObj = new detalle_produccioncollector();
     <table>
         <tr>    
             <th>ID</th>
-            <th>NOMBRE</th>
-            <th>DESCRIPCION</th>
-            <th></th>
+            <th>PRODUCCION</th>
+            <th>MINERAL</th>
+            <th>PESO</th>
+             <th></th>
             <th></th>
         </tr>
         <?php
@@ -82,7 +83,7 @@ $detalle_produccioncollectorObj = new detalle_produccioncollector();
             echo "<td>" . $c->getid_mineral() . "</td>";
             echo "<td>" . $c->getpeso() . "</td>";
             
-            echo "<td><a href='update_detalle_produccion.php?id_detalle_produccion=" . $c->getid_detalle_produccion() . "&nombre=" . $c->getid_produccion() . "&descripcion=" . $c->getid_mineral() . "'><button>Editar</button></a></td>";
+            echo "<td><a href='update_detalle_produccion.php?id_detalle_produccion=" . $c->getid_detalle_produccion() . "&id_produccion=" . $c->getid_produccion() . "&id_mineral=" . $c->getid_mineral() . "&peso=" . $c->getpeso() .  "'><button>Editar</button></a></td>";
             echo "<td><a href='delete_detalle_produccion.php?id_detalle_produccion=". $c->getid_detalle_produccion() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
                 

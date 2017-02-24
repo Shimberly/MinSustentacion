@@ -18,7 +18,7 @@ class detalle_produccioncollector extends collector
   }
     
     function deletedetalle_produccion($id) {
-        $rows = self::$db->deleteRow("DELETE FROM detalle_produccion WHERE id_detalle_produccion=$id",null);
+        $rows = self::$db->deleteRow("DELETE FROM detalle_produccion WHERE id_detalle=$id",null);
     
     
     }
@@ -28,7 +28,7 @@ class detalle_produccioncollector extends collector
         
     }
     function updatedetalle_produccion($id_detalle_produccion,$id_produccion,$id_mineral, $peso) {
-        $rows = self::$db->insertRow("UPDATE detalle_produccion SET id_produccion='$id_produccion' , id_mineral='$id_mineral', peso='$peso' WHERE id_detalle_produccion='$id_detalle_produccion'" ,null);
+        $rows = self::$db->insertRow("UPDATE detalle_produccion SET id_produccion='$id_produccion' , id_mineral='$id_mineral', peso='$peso' WHERE id_detalle='$id_detalle_produccion'" ,null);
         
     }
 }

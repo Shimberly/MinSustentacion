@@ -1,4 +1,4 @@
-<?php
+/**<?php
 
 include_once('Licencia.php');
 include_once("../collector.php");
@@ -18,6 +18,7 @@ class LicenciaCollector extends collector
   }
     
     function deleteLicencia($id) {
+         $rows = self::$db->deleteRow("DELETE FROM persona WHERE id_licencia=$id",null);
         $rows = self::$db->deleteRow("DELETE FROM licencia WHERE id_licencia=$id",null);
     
     

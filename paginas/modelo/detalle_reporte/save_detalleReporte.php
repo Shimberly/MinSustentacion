@@ -16,17 +16,18 @@ $DetalleReporteCollectorObj = new DetalleReporteCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+        
     </head>
     <body>
-        <?php
-        echo "<p>Se creo un  nuevo usuario </p>";
+          <?php
+		  if (isset($_SESSION['mineria'])){
+        echo "<p>Se creo un  nuevo detalle reporte </p>";
         $DetalleReporteCollectorObj->createDetalleReporte($id_dron,$id_tunel,$id_reporte,$id_datos_tunel);
-        ?>
-        <a href="read_detalle_reporte.php"><button>VOLVER</button></a>
-       
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_detalle_reporte.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>

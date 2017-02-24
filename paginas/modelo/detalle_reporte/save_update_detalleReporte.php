@@ -2,7 +2,7 @@
 session_start();
 include_once("DetalleReporteCollector.php");
 
-$id_detalle_reporte = $_POST['id_detalle_reporte'];
+$id_detalle = $_POST['id_detalle'];
 $id_dron = $_POST['id_dron'];
 $id_tunel = $_POST['id_tunel'];
 $id_reporte = $_POST['id_reporte'];
@@ -22,11 +22,16 @@ $DetalleReporteCollectorObj = new DetalleReporteCollector();
     </head>
     <body>
         <?php
-        echo "<p>Se modifico una nueva mina</p>";
-        $DetalleReporteCollectorObj->updateDetalleReporte($id_dron,$id_tunel,$id_reporte,$id_datos_tunel);
-        ?>
-        <a href="read_detalle_reporte.php"><button>VOLVER</button></a>
-       
+		  if (isset($_SESSION['mineria'])){
+   
+        echo "<p>Se modifico un nuevo detalle de reporte</p>";
+        $DetalleReporteCollectorObj->updateDetalleReporte($id_detalle,$id_dron,$id_tunel,$id_reporte,$id_datos_tunel);
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_detalle_reporte.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
+  
   
     </body>
 </html>
