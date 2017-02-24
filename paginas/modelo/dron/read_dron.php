@@ -82,11 +82,11 @@ $DronCollectorObj = new DronCollector();
             echo "<tr>";
             echo "<td>" . $c->getIdDron() . "</td>";
             echo "<td>" . $c->getMarca() . "</td>";             echo "<td>" . $c->getNumSerial() . "</td>";   
-            echo "<td>" . $c->getMinBateria() . "</td>";   
+             echo "<td>" . $c->getIdEmpresa() . "</td>";   echo "<td>" . $c->getMinBateria() . "</td>";   
             
             echo "<td><a href='update_dron.php?ID=". $c->getIdDron() ."&NM=". $c->getMarca() ."&NS=". $c->getNumSerial() ."&IE=". $c->getIdEmpresa() ."&MB=". $c->getMinBateria() ."'><button>Editar</button></a></td>";
                 
-            echo "<td><a href='delete_mina.php?ID=". $c->getIdDron() ."'><button>Eliminar</button></a></td>";
+            echo "<td><a href='delete_dron.php?ID=". $c->getIdDron() ."'><button>Eliminar</button></a></td>";
             echo "</tr>"; 
                 
         }

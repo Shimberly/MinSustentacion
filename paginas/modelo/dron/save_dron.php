@@ -2,10 +2,10 @@
 session_start();
 include_once("DronCollector.php");
 
-$marca = $_POST['nombre'];
-$num_serial = $_POST['num_serial'];
+$marca = $_POST['marca'];
+$num_serial = $_POST['numero'];
 $id_empresa = $_POST['id_empresa'];
-$min_bateria = $_POST['min_bateria'];
+$min_bateria = $_POST['minuto'];
 
 
 $DronCollectorObj = new DronCollector();
@@ -16,17 +16,20 @@ $DronCollectorObj = new DronCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
+      
     
     </head>
     <body>
-        <?php
+         <?php
+		  if (isset($_SESSION['mineria'])){
+   
         echo "<p>Se creo una nueva mina</p>";
-        $DronCollectorObj->createDron($marca,$num_serial,$id_empresa,$bateria_minutos);
-        ?>
-        <a href="read_dron.php"><button>VOLVER</button></a>
-       
-  
+        $DronCollectorObj->createDron($marca,$num_serial,$id_empresa,$min_bateria);
+      
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_dron.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
     </body>
 </html>
