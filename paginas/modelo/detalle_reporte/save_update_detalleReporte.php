@@ -25,7 +25,7 @@ $DetalleReporteCollectorObj = new DetalleReporteCollector();
         echo "<p>Se modifico una nueva mina</p>";
         $DetalleReporteCollectorObj->updateDetalleReporte($id_dron,$id_tunel,$id_reporte,$id_datos_tunel);
         ?>
-        <a href="read_DetalleReporte.php"><button>VOLVER</button></a>
+        <a href="read_detalle_reporte.php"><button>VOLVER</button></a>
        
   
     </body>

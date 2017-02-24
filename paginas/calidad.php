@@ -8,6 +8,7 @@
 <title>Mineria-Calidad</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/estilo.css">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		
     <meta name="description" content="Seguridad Minera">
@@ -72,17 +73,15 @@
                             <div style="text-align:center;">
                             <h1> Mineria UC </h1>
                             <img alt="logo" class="img-responsive" src="../imagenes/logoCompañiaMinera.png" >
-
+                                
+                                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
+                                      <li class="active"><a href="#">Calidad de Aire</a></li>
+                                      <li ><a href="produccion.php">Producción</a></li>
+                                      <li><a href="galeria.php">Galería</a></li>
+                                </ul>
+                            
                             </div>
-                                <div class="collapse navbar-collapse" >
-                                    
-                                    <ul class="menuCalidad">
-                                      <li><a class="active" href="#home">Home</a></li>
-                                      <li><a href="#news">News</a></li>
-                                      <li><a href="#contact">Contact</a></li>
-                                      <li><a href="#about">About</a></li>
-                                    </ul>
-                                </div>   
+                                 
                     
                     </div>
                    

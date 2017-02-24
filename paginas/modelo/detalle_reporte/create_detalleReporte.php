@@ -93,7 +93,7 @@ $DetalleReporteCollectorObj = new DetalleReporteCollector();
                     <label>id_reporte</label>
                    
                     <?php
-                     echo "<select name='id_dron'>";
+                     echo "<select name='id_reporte'>";
                      foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
                         echo "<option>". $c->getid_reporte()."</option>";
                      }
@@ -103,7 +103,7 @@ $DetalleReporteCollectorObj = new DetalleReporteCollector();
                     <label>id_datos_tunel</label>
                    
                     <?php
-                     echo "<select name='id_dron'>";
+                     echo "<select name='id_datos_tunel'>";
                      foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
                         echo "<option>". $c->getid_datos_tunel()."</option>";
                      }
