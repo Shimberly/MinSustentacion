@@ -21,12 +21,17 @@ $ciudadCollectorObj = new ciudadCollector();
     
     </head>
     <body>
-        <?php
+         <?php
+		  if (isset($_SESSION['mineria'])){
+   
         echo "<p>Se modifico una nueva Ciudad</p>";
         $ciudadCollectorObj->updateCiudad($id,$nombre,$id_pais);
-        ?>
-        <a href="leerCiudad.php"><button>VOLVER</button></a>
-       
+       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=leerCiudad.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
+  
   
     </body>
 </html>

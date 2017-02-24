@@ -3,8 +3,6 @@ session_start();
 ?>
 <?php
 include_once("ciudadCollector.php");
-$usuario = $_SESSION['mineria'];
-$id;
 
 $ciudadCollectorObj = new ciudadCollector();
 
