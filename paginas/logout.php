@@ -11,7 +11,7 @@ session_start();
     
     </head>
     <body>
-	<h1>LOGOUT</h1>
+	
 	<?php
 
         if (isset($_SESSION['mineria'])){
