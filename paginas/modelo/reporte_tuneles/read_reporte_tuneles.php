@@ -2,18 +2,16 @@
 session_start();
 ?>
 <?php
-include_once('PersonaCollector.php');
-$usuario = $_SESSION['mineria'];
-$id;
+include_once('ReporteTunelesCollector.php');
 
-$PersonaCollectorObj = new PersonaCollector();
+$ReporteTunelesCollectorObj = new ReporteTunelesCollector();
 
 ?>
 
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Clase Persona</title>
+	<title>Clase ReporteTuneles</title>
     <link rel="stylesheet" href="../../../css/estilo.css">
     <link href="../../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../css/bootstrap.css" rel="stylesheet">
@@ -64,41 +62,28 @@ $PersonaCollectorObj = new PersonaCollector();
                  <br>
         <br>  
           
-            <h1>TABLA PERSONA</h1>
+            <h1>TABLA REPORTE TUNELES</h1>
            <br> 
-            <a href="create_persona.php"><button class="crear">CREAR</button></a>
+            <a href="create_ReporteTuneles.php"><button class="crear">CREAR</button></a>
             <table>
                 <tr>    
                     <th class='IP'>ID</th>
-                    <th class='NO' >NOMBRE</th>
-                    <th class='AP'>APELLIDO</th>
-                    <th class='EM'>EMAIL</th>
-                    <th class='US'>USUARIO</th>
-                    <th class='CL'>CLAVE</th>
-                    <th class='RU'>RUC</th>
-                    <th class='IE'>ID_EMPRESA</th>
-                    <th class='LI'>ID_LICENCIA</th>
-                    <th class='FN'>FECHA_NACIMIENTO</th>
+                    <th class='NO' >ID_EMPRESA</th>
+                    <th class='AP'>FECHA</th>
+                   
                     <th></th>
                     <th></th>
                 </tr>
                 <?php
-                    foreach ($PersonaCollectorObj->showPersonas() as $c){
+                    foreach ($ReporteTunelesCollectorObj->showReporteTuneles() as $c){
                     echo "<tr>";
-                    echo "<td class='IP'>" . $c->getIdPersona() . "</td>";
-                    echo "<td class='NO'>" . $c->getNombre() . "</td>";             
-                    echo "<td class='AP'>" . $c->getApellido() . "</td>";   
-                    echo "<td class='EM'>" . $c->getEmail() . "</td>";   
-                    echo "<td class='US'>" . $c->getUsuario() . "</td>";
-                    echo "<td class='CL'>" . $c->getClave() . "</td>";             
-                    echo "<td class='RU'>" . $c->getRuc() . "</td>";   
-                    echo "<td class='IE'>" . $c->getIdEmpresa() . "</td>"; 
-                    echo "<td class='LI'>" . $c->getIdLicencia() . "</td>";   
-                    echo "<td class='FN'>" . $c->getFechaNacimiento() . "</td>"; 
+                    echo "<td class='IP'>" . $c->getId_reporte() . "</td>";
+                    echo "<td class='NO'>" . $c->getId_empresa() . "</td>";             
+                    echo "<td class='AP'>" . $c->getFecha() . "</td>";   
+                   
+                  echo "<td><a href='update_reporteTuneles.php?ID=". $c->getId_reporte() ."&NM=". $c->getId_empresa() ."&AP=". $c->getFecha() ."'><button>Editar</button></a></td>";
 
-                  echo "<td><a href='update_persona.php?ID=". $c->getIdPersona() ."&NM=". $c->getNombre() ."&AP=". $c->getApellido() ."&EM=". $c->getEmail() ."&US=". $c->getUsuario() ."&PS=". $c->getClave() ."&RU=". $c->getRuc() ."&IE=". $c->getIdEmpresa() ."&IL=". $c->getIdLicencia() ."&FE=". $c->getFechaNacimiento() ."'><button>Editar</button></a></td>";
-
-                    echo "<td><a href='delete_persona.php?ID=". $c->getIdPersona() ."'><button>Eliminar</button></a></td>";
+                    echo "<td><a href='delete_reporteTuneles.php?ID=". $c->getId_reporte() ."'><button>Eliminar</button></a></td>";
                     echo "</tr>"; 
 
 

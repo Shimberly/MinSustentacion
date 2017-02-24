@@ -72,6 +72,8 @@ $LicenciaCollectorObj = new LicenciaCollector();
                  <br>
         <br>  
                 <form class="login" method="post" action="save_persona.php">
+                     <br>
+        <br> 
                     <label >Nombre </label>
                     <input type="text" name="nombre" placeholder="Introduce tu nombre">
                     <br>
