@@ -14,17 +14,18 @@ $produccioncollectorObj = new produccioncollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+      
     </head>
     <body>
-        <?php
+         <?php
+		  if (isset($_SESSION['mineria'])){
         echo "<p>Se creo un nuevo produccion</p>";
         $produccioncollectorObj->createproduccion($fecha,$id_empresa);
-        ?>
-        <a href="read_produccion.php"><button>VOLVER</button></a>
-       
+       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_produccion.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>

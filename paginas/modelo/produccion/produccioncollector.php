@@ -18,6 +18,8 @@ class produccioncollector extends collector
   }
     
     function deleteproduccion($id) {
+         $rows = self::$db->deleteRow("DELETE FROM detalle_produccion WHERE id_produccion=$id",null);
+    
         $rows = self::$db->deleteRow("DELETE FROM produccion WHERE id_produccion=$id",null);
     
     

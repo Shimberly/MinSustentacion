@@ -15,17 +15,18 @@ $produccioncollectorObj = new produccioncollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+       
     </head>
     <body>
-        <?php
-        echo "<p>Se modificó el produccion</p>";
+           <?php
+		  if (isset($_SESSION['mineria'])){
+        echo "<p>Se modificó la tabla produccion</p>";
         $produccioncollectorObj->updateproduccion($id_produccion,$fecha,$id_empresa);
-        ?>
-        <a href="read_produccion.php"><button>VOLVER</button></a>
-       
+      echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_produccion.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>

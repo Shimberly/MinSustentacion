@@ -19,11 +19,14 @@ $produccioncollectorObj = new produccioncollector();
     </head>
     <body>
         <?php
+		  if (isset($_SESSION['mineria'])){
         echo "<p>Se eliminó el índice #" . $id_produccion ."?</p>";
         $produccioncollectorObj->deleteproduccion($id_produccion);
-        ?>
-        <a href="read_produccion.php"><button>VOLVER</button></a>
-       
+      echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_produccion.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>
