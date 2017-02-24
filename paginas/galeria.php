@@ -120,7 +120,7 @@
 					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 						<div class="row">
 						<div class="col-md-6 ">
-							<a href="calidadMensual.php"><div style="background-color:#e0e0eb; text-align:center">
+							<a href="#"><div style="background-color:#e0e0eb; text-align:center">
 								<br><br>
 								<p>Mensual</p>
 								<br><br>
@@ -128,7 +128,7 @@
 	
 						</div>
 						<div class="col-md-6 ">
-							<a href="calidadAnual.php"><div style="background-color:#b3b3b3; text-align:center">
+							<a href="#"><div style="background-color:#b3b3b3; text-align:center">
 								<br><br>
 								<p>Anual</p> 
 								<br><br>
