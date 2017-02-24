@@ -79,15 +79,15 @@
 			    <div style="text-align:center;">
 				<h1> Mineria UC </h1>
 				<img alt="logo" class="img-responsive" src="../imagenes/logoCompañiaMinera.png" >
-					
-			    </div>
-                            <div class="collapse navbar-collapse" id="haml">
+				
                                 <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
                                       <li><a href="calidad.php" >Calidad de Aire</a></li>
                                       <li><a href="produccion.php">Producción</a></li>
-                                      <li class="active"><a href="#vtab1" data-toggle="tab">Galería</a></li>
+                                      <li class="active"><a href="#">Galería</a></li>
                                 </ul>
-                            </div>   
+                         
+			    </div>
+                              
                     
                     </div>
                     <div class="col-sm-9">

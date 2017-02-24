@@ -37,57 +37,84 @@ $DetalleReporteCollectorObj = new DetalleReporteCollector();
                 <h1>MODIFICAR Detalle Reporte</h1>
                 <form class="login" method="post" action="save_update_detalleReporte.php">
                       <?php
-                        echo "<label >Id_DetalleReporte</label>";
 
-                        echo "<input type='text' name='id_DetalleReporte' value='". $id ."' readonly>";
-                        echo "<br>";
 
-                        echo "<label >Nombre </label>";
-                        echo "<input type='text' name='nombre' value='". $nombre ."'>";
-                        echo "<br>";
+                        echo "<label>Id detalle reporte</label>";
 
-		        echo "<label >Apellido </label>";
-                        echo "<input type='text' name='apellido' value='". $apellido ."'>";
-                        echo "<br>";
-
-		        echo "<label >Email </label>";
-                        echo "<input type='text' name='email' value='". $email ."'>";
-                        echo "<br>";
-
-		        echo "<label >Usuario</label>";
-                        echo "<input type='text' name='usuario' value='". $usuario ."'>";
-                        echo "<br>";
-
-			echo "<label >Clave </label>";
-                        echo "<input type='text' name='clave' value='". $clave ."'>";
-                        echo "<br>";
-
-		        echo "<label >Ruc </label>";
-                        echo "<input type='text' name='ruc' value='". $ruc ."'>";
-                        echo "<br>";
-
-                        echo "<label>Id_Empresa</label>";
-
-                         echo "<select value='". $id_empresa ."' name='id_empresa'>";
+                         echo "<select value='". $id_detalle_reporte ."' name='id_detalle_reporte'>";
                          foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
-                            if ($id_empresa == $c->getIdEmpresa()){
-                                echo "<option selected>". $c->getIdEmpresa()."</option>";
+                            if ($id_detalle_reporte == $c->getid_detalle_reporte()){
+                                echo "<option selected>". $c->getid_detalle_reporte()."</option>";
                             }else{   
-                                echo "<option>". $c->getIdEmpresa()."</option>";
+                                echo "<option>". $c->getid_detalle_reporte()."</option>";
+                            }
+                         }
+                         echo "</select>";
+                    
+                        echo "<br>";
+                    
+                    echo "<label>Id dron</label>";
+
+                         echo "<select value='". $id_dron ."' name='id_dron'>";
+                         foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
+                            if ($id_dron == $c->getid_dron()){
+                                echo "<option selected>". $c->getid_dron()."</option>";
+                            }else{   
+                                echo "<option>". $c->getid_dron()."</option>";
+                            }
+                         }
+                         echo "</select>";
+                    
+                        echo "<br>";
+                    
+                    echo "<label>Id tunel</label>";
+
+                         echo "<select value='". $id_tunel ."' name='id_tunel'>";
+                         foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
+                            if ($id_tunel == $c->getid_tunel()){
+                                echo "<option selected>". $c->getid_tunel()."</option>";
+                            }else{   
+                                echo "<option>". $c->getid_tunel()."</option>";
+                            }
+                         }
+                         echo "</select>";
+                    
+                        echo "<br>";
+                    
+                    echo "<label>Id reporte</label>";
+
+                         echo "<select value='". $id_reporte ."' name='id_reporte'>";
+                         foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
+                            if ($id_reporte == $c->getid_reporte()){
+                                echo "<option selected>". $c->getid_reporte()."</option>";
+                            }else{   
+                                echo "<option>". $c->getid_reporte()."</option>";
+                            }
+                         }
+                         echo "</select>";
+                    
+                        echo "<br>";
+                    
+                    echo "<label>Id datos tunel</label>";
+
+                         echo "<select value='". $id_datos_tunel ."' name='id_datos_tunel'>";
+                         foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
+                            if ($id_datos_tunel == $c->getid_datos_tunel()){
+                                echo "<option selected>". $c->getid_datos_tunel()."</option>";
+                            }else{   
+                                echo "<option>". $c->getid_datos_tunel()."</option>";
                             }
                          }
                          echo "</select>";
                     
                         echo "<br>";
                         
-                     echo "<label >Fecha Nacimiento</label>";
-                        echo "<input type='text' name='fecha' value='". $fecha_nacimiento ."'>";
-                        echo "<br>";
+
                         
                     ?>
                     <br><br>
                     <?php
-                     echo "<a href='save_update_DetalleReporte.php?ID=". $id ."'><button type='submit'>Modificars</button></a>";
+                     echo "<a href='save_update_detalleReporte.php?id_detalle_reporte=". $id_detalle_reporte ."'><button type='submit'>Modificar</button></a>";
                     ?>
                 </form>
             </div>
