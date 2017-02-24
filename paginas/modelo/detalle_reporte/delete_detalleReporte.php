@@ -1,11 +1,11 @@
 <?php
 session_start();
-include_once("PersonaCollector.php");
+include_once("DetalleReporteCollector.php");
 
 $id = $_GET['ID'];
 
 
-$PersonaCollectorObj = new PersonaCollector();
+$DetalleReporteCollectorObj = new DetalleReporteCollector();
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +20,9 @@ $PersonaCollectorObj = new PersonaCollector();
     <body>
         <?php
         echo "<p>Se elimino la tabla #" . $id ."?</p>";
-        $PersonaCollectorObj->deletePersona($id);
+        $DetalleReporteCollectorObj->deleteDetalleReporte($id);
         ?>
-        <a href="read_persona.php"><button>VOLVER</button></a>
+        <a href="read_DetalleReporte.php"><button>VOLVER</button></a>
        
   
     </body>

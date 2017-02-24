@@ -1,100 +1,54 @@
 <?php
 
-class Persona
+class DetalleReporte
 {
-    private $idPersona;
-    private $nombre;
-    private $apellido;
-    private $email;
-    private $usuario;
-    private $clave;
-    private $ruc;
-    private $id_empresa;
-    private $id_licencia;
-    private $fecha_nacimiento;
-    
-     function __construct($idPersona, $nombre, $apellido, $email, $usuario, $clave, $ruc, $id_empresa, $id_licencia , $fecha_nacimiento ) {
-       $this->idPersona = $idPersona;
-       $this->nombre = $nombre;
-       $this->apellido = $apellido;
-       $this->email = $email;
-       $this->usuario = $usuario;
-       $this->clave = $clave;
-       $this->ruc = $ruc;
-       $this->id_empresa = $id_empresa;
-       $this->id_licencia = $id_licencia;
-       $this->fecha_nacimiento = $fecha_nacimiento;
+    private $id_detalle_reporte;
+    private $id_dron;
+    private $id_tunel;
+    private $id_reporte;
+    private $id_datos_tunel;
+ 
+     function __construct($id_detalle_reporte, $id_dron, $id_tunel, $id_reporte, $id_datos_tunel) {
+       $this->id_detalle_reporte = $id_detalle_reporte;
+       $this->id_dron = $id_dron;
+       $this->id_tunel = $id_tunel;
+       $this->id_reporte = $id_reporte;
+       $this->id_datos_tunel = $id_datos_tunel;
      }
     
-     function setIdPersona($idPersona){
-       $this->idPersona = $idPersona;
+     function setid_detalle_reporte($id_detalle_reporte){
+       $this->id_detalle_reporte = $id_detalle_reporte;
      } 
-     function getIdPersona(){
-       return $this->idPersona;
+     function getid_detalle_reporte(){
+       return $this->id_detalle_reporte;
      } 
-     function setNombre($nombre){
-       $this->nombre = $nombre;
+     function setid_dron($id_dron){
+       $this->id_dron = $id_dron;
      } 
-     function getNombre(){
-       return $this->nombre;
-     } 
-    
-     function setApellido($apellido){
-       $this->apellido = $apellido;
-     } 
-     function getApellido(){
-       return $this->apellido;
+     function getid_dron(){
+       return $this->id_dron;
      } 
     
-     function setEmail($email){
-       $this->email = $email;
+     function setid_tunel($id_tunel){
+       $this->id_tunel = $id_tunel;
      } 
-     function getEmail(){
-       return $this->email;
-     } 
-
-     function setUsuario($usuario){
-       $this->usuario = $usuario;
-     } 
-     function getUsuario(){
-       return $this->usuario;
-     } 
-   
-     function setClave($clave){
-       $this->clave = $clave;
-     } 
-     function getClave(){
-       return $this->clave;
-     } 
-
-     function setRuc($ruc){
-       $this->ruc = $ruc;
-     } 
-     function getRuc(){
-       return $this->ruc;
-     } 
-
-     function setIdEmpresa($id_empresa){
-       $this->id_empresa = $id_empresa;
-     } 
-     function getIdEmpresa(){
-       return $this->id_empresa;
-     } 
-
-     function setIdLicencia($id_licencia){
-       $this->id_licencia = $id_licencia;
-     } 
-     function getIdLicencia(){
-       return $this->id_licencia;
-     } 
-
-     function setFechaNacimiento($fecha_nacimiento){
-       $this->fecha_nacimiento = $fecha_nacimiento;
-     } 
-     function getFechaNacimiento(){
-       return $this->fecha_nacimiento;
+     function getid_tunel(){
+       return $this->id_tunel;
      } 
     
+     function setid_reporte($id_reporte){
+       $this->id_reporte = $id_reporte;
+     } 
+     function getid_reporte(){
+       return $this->id_reporte;
+     } 
+
+     function setid_datos_tunel($id_datos_tunel){
+       $this->id_datos_tunel = $id_datos_tunel;
+     } 
+     function getid_datos_tunel(){
+       return $this->id_datos_tunel;
+     }    
 }
 
 ?> 

@@ -1,19 +1,14 @@
 <?php
 session_start();
-include_once("PersonaCollector.php");
+include_once("DetalleReporteCollector.php");
 
-$id = $_POST['id_mina'];
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$email = $_POST['email'];
-$usuario = $_POST['usuario'];
-$clave = $_POST['clave'];
-$ruc = $_POST['ruc'];
-$id_empresa = $_POST['id_empresa'];
-$id_licencia = $_POST['id_licencia'];
-$fecha_nacimiento = $_POST['fecha_nacimiento'];
+$id_detalle_reporte = $_POST['id_detalle_reporte'];
+$id_dron = $_POST['id_dron'];
+$id_tunel = $_POST['id_tunel'];
+$id_reporte = $_POST['id_reporte'];
+$id_datos_tunel = $_POST['id_datos_tunel'];
 
-$PersonaCollectorObj = new PersonaCollector();
+$DetalleReporteCollectorObj = new DetalleReporteCollector();
 ?>
 
 <!DOCTYPE html>
@@ -28,9 +23,9 @@ $PersonaCollectorObj = new PersonaCollector();
     <body>
         <?php
         echo "<p>Se modifico una nueva mina</p>";
-        $PersonaCollectorObj->updatePersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento);
+        $DetalleReporteCollectorObj->updateDetalleReporte($id_dron,$id_tunel,$id_reporte,$id_datos_tunel);
         ?>
-        <a href="read_persona.php"><button>VOLVER</button></a>
+        <a href="read_DetalleReporte.php"><button>VOLVER</button></a>
        
   
     </body>
