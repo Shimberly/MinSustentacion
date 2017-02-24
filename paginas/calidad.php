@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    #$ID=$_GET["ID"];
+    $ID=$_GET["ID"];
 
 ?>
 <!DOCTYPE html>
@@ -197,13 +197,13 @@
 							<br><br><br>
 						</div>
                             <?php
-                            #if($ID == 1){
+                            if($ID == 1){
                                 echo "<div class='row'>";
                                 echo "<div class='containerCenter'>";
                                 echo "<a href='administrar.php'><button>Administrar base de datos</button></a>";
                                 echo "</div>";
                                 echo "</div>";
-                            #}
+                            }
                             ?>
 
                     </div>
