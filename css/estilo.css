@@ -104,33 +104,13 @@ h1{
 }
 
 h1{float: left}
-.lateral {
-    background-color: aquamarine;
-}
-.lateral ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+
+.cabecera{
+    background-color: cyan;
+    text-align: center;
 }
 
-.lateral li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
+.asd{
+    font-size: 70px;
 }
 
-.lateral li a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.lateral li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
