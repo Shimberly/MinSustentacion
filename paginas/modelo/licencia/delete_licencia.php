@@ -18,12 +18,14 @@ $LicenciaCollectorObj = new LicenciaCollector();
     
     </head>
     <body>
-        <?php
+         <?php
+		  if (isset($_SESSION['mineria'])){
         echo "<p>Se elimino la tabla #" . $id ."?</p>";
         $LicenciaCollectorObj->deleteLicencia($id);
-        ?>
-        <a href="read_licencia.php"><button>VOLVER</button></a>
-       
-  
+       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_licencia.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
     </body>
 </html>

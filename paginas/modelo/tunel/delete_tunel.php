@@ -18,12 +18,15 @@ $TunelCollectorObj = new TunelCollector();
     
     </head>
     <body>
-        <?php
+         <?php
+		  if (isset($_SESSION['mineria'])){
         echo "<p>Se elimino la tabla #" . $id ."?</p>";
         $TunelCollectorObj->deleteTunel($id);
-        ?>
-        <a href="read_tunel.php"><button>VOLVER</button></a>
-       
+       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_tunel.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>

@@ -2,7 +2,7 @@
 session_start();
 include_once("empresaCollector.php");
 
-$razonSocial = $_POST['razonSocial'];
+$razonSocial = $_POST['razonsocial'];
 $telefono = $_POST['telefono'];
 $direccion = $_POST['direccion'];
 $idCiudad = $_POST['idCiudad'];

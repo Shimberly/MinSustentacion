@@ -34,7 +34,7 @@ $ciudadCollectorObj = new ciudadCollector();
                 <h1>CREAR Empresa</h1>
                 <form class="login" method="post" action="save_empresa.php">
                     <label >Razon Social </label>
-                    <input type="text" name="razonSocial">
+                    <input type="text" name="razonsocial">
                     <br>
 		    <label >Ruc </label>
                     <input type="text" name="ruc" >

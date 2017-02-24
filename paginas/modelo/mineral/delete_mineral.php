@@ -18,12 +18,17 @@ $mineralcollectorObj = new mineralcollector();
     
     </head>
     <body>
-        <?php
+         <?php
+		  if (isset($_SESSION['mineria'])){
+   
         echo "<p>Se eliminó el índice #" . $id_mineral ."?</p>";
         $mineralcollectorObj->deletemineral($id_mineral);
-        ?>
-        <a href="read_mineral.php"><button>VOLVER</button></a>
-       
+         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_mineral.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
+  
   
     </body>
 </html>

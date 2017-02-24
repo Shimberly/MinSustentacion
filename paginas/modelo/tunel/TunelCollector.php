@@ -18,7 +18,9 @@ class TunelCollector extends collector
   }
     
     function deleteTunel($id) {
-        $rows = self::$db->deleteRow("DELETE FROM Tunel WHERE id_tunel=$id",null);
+         $rows = self::$db->deleteRow("DELETE FROM detalle_reporte WHERE id_tunel=$id",null);
+    
+        $rows = self::$db->deleteRow("DELETE FROM tunel WHERE id_tunel=$id",null);
     
     
     }

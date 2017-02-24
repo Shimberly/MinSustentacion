@@ -1,13 +1,17 @@
 <?php
 	session_start();
+    $ID=$_GET["ID"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
  <meta charset="utf-8">
-<title>Mineria PKYK</title>
+<title>Mineria-Calidad</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/estilo.css">
+
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		
     <meta name="description" content="Seguridad Minera">
@@ -16,7 +20,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <body>
-
+         <?php
+		                  if (isset($_SESSION['mineria'])){
+            ?>
         <div class="container">
         <br>
       <header>
@@ -36,9 +42,7 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                  <?php
-		                  if (isset($_SESSION['mineria'])){
-                        ?>
+                 
                <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php
                     echo "Hola " .$_SESSION['mineria']
                     ?><span class="caret"></span></a>
@@ -47,14 +51,7 @@
                                 <li><a href="logout.php">Salir</a></li>
                             </ul>
                         </li>
-                        <?php
-                          }else{    
-                        ?>
-                             <li class="page-scroll"><a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
-                                 </li>
-                             <?php
-                          } 
-                        ?>
+                       
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -76,20 +73,21 @@
             <div class="container ">
                 <div class="row">
                     <div class="col-sm-3">
-			    <div style="text-align:center;">
-				<h1> Mineria UC </h1>
-				<img alt="logo" class="img-responsive" src="../imagenes/logoCompañiaMinera.png" >
-					
-			    </div>
-                            <div class="collapse navbar-collapse" id="haml">
+                            <div style="text-align:center;">
+                            <h1> Mineria UC </h1>
+                            <img alt="logo" class="img-responsive" src="../imagenes/logoCompañiaMinera.png" >
+                                
                                 <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
-                                      <li class="active"><a href="#vtab1" data-toggle="tab">Calidad de Aire</a></li>
-                                      <li><a href="#vtab2" data-toggle="tab">Producción</a></li>
-                                      <li><a href="#vtab3" data-toggle="tab">Galería</a></li>
+                                      <li class="active"><a href="#">Calidad de Aire</a></li>
+                                      <li ><a href="produccion.php">Producción</a></li>
+                                      <li><a href="galeria.php">Galería</a></li>
                                 </ul>
-                            </div>   
+                            
+                            </div>
+                                 
                     
                     </div>
+                   
                     <div class="col-sm-9">
                         <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
@@ -177,108 +175,48 @@
 					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 						<div class="row">
 						<div class="col-md-6 ">
-							<div style="background-color:#e0e0eb; text-align:center">
+							<a href="#"><div style="background-color:#e0e0eb; text-align:center">
 								<br><br>
-								<p>Mensual</p> 
+								<p>Mensual</p>
 								<br><br>
-							</div>
+							</div></a>
 	
 						</div>
 						<div class="col-md-6 ">
-							<div style="background-color:#b3b3b3; text-align:center">
+							<a href="#"><div style="background-color:#b3b3b3; text-align:center">
 								<br><br>
 								<p>Anual</p> 
 								<br><br>
-							</div>
-	
-						</div>
-                            <div class="col-md-12 ">
-								<br><br>
-                                <h1>Tablas de la base de datos</h1>
-                                <h2>Paul</h2>
-                                <a href="modelo/produccion/produccion.php"#>{ PRODUCCIÓN }</a>
-                                <a href="modelo/detalle_produccion/detalle_produccion.php"#>{ DETALLE DE PRODUCCIÓN }</a>
-                                <a href="modelo/mineral/read_mineral.php"#>{ MINERAL }</a>
-                                <br>
-                                <h2>Kimmy</h2>
-                                <a href="modelo/reporte_tuneles/read_reporte_tuneles.php"#>{ REPORTE TUNELES }</a>
-                                <a href="modelo/detalle_reporte/read_detalle_reporte.php"#>{ DETALLE REPORTE }</a>
-                                <a href="modelo/datos_tunel/read_datos_tunel.php"#>{ DATOS TUNELES }</a>
-                                <a href="modelo/tunel/read_tunel.php"#>{ TUNEL }</a>
-                                <a href="modelo/mina/read_mina.php"#>{ MINA }</a>
-                                <br>
-                                <h2>Keyla</h2>
-                                <a href="modelo/ciudad/leerCiudad.php"#>{ CIUDAD }</a>
-                                <a href="modelo/pais/leerPais.php"#>{ PAIS }</a>
-                                <a href="modelo/empresa/leerEmpresa.php"#>{ EMPRESA }</a>
-                                <br>
-                                <h2>Yander</h2>
-                                <a href="modelo/persona/read_persona.php"#>{ PERSONA }</a>
-                                <a href="modelo/licencia/read_licencia.php"#>{ LICENCIA }</a>
-                                <a href="modelo/dron/read_dron.php"#>{ DRON }</a>
-								<br><br>
-							</div>
-	
-						</div>
-							
-						</div>
-
-                                </div>
-
-
-                                <div role="tabpanel" class="tab-pane fade" id="vtab2">
-                                	<h3>Producción</h3>
-						<div class="col-md-12 ">
-							<div>
-								<img alt="barra" class="img-responsive" src="../imagenes/barrascontinuo.png">
-							</div>
+							</div></a>
 	
 						</div>
 
+						</div>
+                                     
+	
+							<br><br><br>
+						</div>
+                            <?php
+                            if($ID == 1){
+                                echo "<div class='row'>";
+                                echo "<div class='containerCenter'>";
+                                echo "<a href='administrar.php'><button>Administrar base de datos</button></a>";
+                                echo "</div>";
+                                echo "</div>";
+                            }
+                            ?>
 
-
-                                </div>
-			
-                    <div role="tabpanel" class="tab-pane fade" id="vtab3">
-                                    <h3>Galería</h3>
-                                    	
-                                    
-                                
-                   
-						<div class="col-md-1 ">
-							
-								<img alt="mina1" class="img-responsive" src="../imagenes/mina1.jpg">
-							
-						</div>
-						<div class="col-md-1 ">
-							
-								<img alt="mina2" class="img-responsive" src="../imagenes/mina2.jpg">
-						
-						</div>
-						<div class="col-md-1 ">
-							
-								<img alt="mina3" class="img-responsive" src="../imagenes/mina3.jpg">
-							
-						</div>
-                        <div class="col-md-1 ">
-							
-								<img alt="mina4" class="img-responsive" src="../imagenes/mina4.jpeg">
-							
-					</div>
-                   
-                 </div>
+                    </div>
+              
                 </div>
                 </div>
                     
             </div>
             
-                      <br>
-<br>  
-         <br>
-<br>
+            <br><br><br><br><br><br><br><br><br>
+    
             
-            
-      <div class="container hidden-xs">
+      <div class="container">
             <div id="margen">
                  
                
@@ -300,7 +238,7 @@
             
         
     </div>
-    </div>
+
         
 <script src="../js/j3.js"></script>
     <script src="../js/bootstrap.js"></script>
@@ -313,6 +251,10 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>	
     <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-      
+       <?php
+                          }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+                             } 
+                        ?>
     </body>
  </html>

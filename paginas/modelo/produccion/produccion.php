@@ -1,6 +1,6 @@
 <?php
 
-class Demo
+class produccion
 {
     private $id_produccion;
     private $fecha;
@@ -9,7 +9,7 @@ class Demo
      function __construct($id_produccion, $fecha, $id_empresa) {
        $this->id_produccion = $id_produccion;
        $this->fecha = $fecha;
-        $this->id_empresa = $id_empresa;
+       $this->id_empresa = $id_empresa;
      }
     
      function setid_produccion($id_produccion){

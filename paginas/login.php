@@ -17,7 +17,9 @@
 
 
 <body>
-
+     <?php
+		  if (!isset($_SESSION['mineria'])){
+    ?>
         <div class="container">
         <br>
             <header>
@@ -38,7 +40,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#">Acerca</a>
+                        <a href="about.php">Acerca</a>
                     </li>
                     <li class="page-scroll">
                         <a href="nosotros.php">Nosotros</a>
@@ -77,7 +79,7 @@
                  <br>
                  
                     <p id="profile-name" class="profile-name-card"></p>
-                    <form class="form-signin" method="post" action="validarLogin.php">
+                    <form class="form-signin" method="post" action="calidad.php">
                         <span id="reauth-email" class="reauth-email"></span>
                         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
                         <input type="password" name="clave" id="inputPassword" class="form-control" placeholder="Contraseña" required>
@@ -122,6 +124,14 @@
             
                 
     </div>
+    
+    
+    
+     <?php
+                          }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+                             } 
+                        ?>
     
  <script src="../js/j3.js"></script>
     <script src="../js/bootstrap.js"></script>

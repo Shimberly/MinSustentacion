@@ -3,6 +3,10 @@
 include_once('Mina.php');
 include_once("../collector.php");
 
+
+include_once("../tunel/TunelCollector.php");
+
+
 class MinaCollector extends collector
 {
   
@@ -18,6 +22,15 @@ class MinaCollector extends collector
   }
     
     function deleteMina($id) {
+        
+        $TunelCollectorObj = new TunelCollector();
+        foreach ($TunelCollectorObj->showTunels() as $c){
+                      if($id == $c->getIdMina()){
+                          $TunelCollectorObj->deleteTunel($c->getIdTunel());
+                          
+                      }
+                    }
+         
         $rows = self::$db->deleteRow("DELETE FROM Mina WHERE id_mina=$id",null);
     
     

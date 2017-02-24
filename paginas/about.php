@@ -41,7 +41,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#">Acerca</a>
+                        <a href="about.php">Acerca</a>
                     </li>
                     <li class="page-scroll">
                         <a href="nosotros.php">Nosotros</a>
@@ -66,7 +66,7 @@
                         <?php
                           }else{    
                         ?>
-                             <li class="page-scroll"><a  href="paginas/login.php"><img class="img-responsive" src="imagenes/3.png" width="80" height="35" alt="login" ></a>
+                             <li class="page-scroll"><a  href="login.php"><img class="img-responsive" src="../imagenes/3.png" width="80" height="35" alt="login" ></a>
                                  </li>
                              <?php
                           } 

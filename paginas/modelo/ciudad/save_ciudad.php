@@ -19,12 +19,17 @@ $ciudadCollectorObj = new ciudadCollector();
     
     </head>
     <body>
-        <?php
+          <?php
+		  if (isset($_SESSION['mineria'])){
+   
         echo "<p>La ciudad ha sido guardada</p>";
         $ciudadCollectorObj->createCiudad($nombre,$id_pais);
-        ?>
-        <a href="leerCiudad.php"><button>volver</button></a>
-       
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=leerCiudad.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
+  
   
     </body>
 </html>

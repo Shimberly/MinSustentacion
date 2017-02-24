@@ -15,17 +15,19 @@ $mineralcollectorObj = new mineralcollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+        
     </head>
     <body>
         <?php
+		  if (isset($_SESSION['mineria'])){
+   
         echo "<p>Se modificó el mineral</p>";
         $mineralcollectorObj->updatemineral($id_mineral,$nombre,$descripcion);
-        ?>
-        <a href="read_mineral.php"><button>VOLVER</button></a>
-       
+         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_mineral.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>

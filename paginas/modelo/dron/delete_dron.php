@@ -5,7 +5,7 @@ include_once("DronCollector.php");
 $id = $_GET['ID'];
 
 
-$DropCollectorObj = new DropCollector();
+$DronCollectorObj = new DronCollector();
 ?>
 
 <!DOCTYPE html>
@@ -13,17 +13,19 @@ $DropCollectorObj = new DropCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+        
     </head>
     <body>
-        <?php
+         <?php
+       
+		  if (isset($_SESSION['mineria'])){
+   
         echo "<p>Se elimino la tabla #" . $id ."?</p>";
         $DronCollectorObj->deleteDron($id);
-        ?>
-        <a href="read_dron.php"><button>VOLVER</button></a>
-       
-  
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_dron.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
     </body>
 </html>

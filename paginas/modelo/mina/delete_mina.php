@@ -2,8 +2,8 @@
 session_start();
 include_once("MinaCollector.php");
 
-$id = $_GET['ID'];
 
+$id = $_GET['ID'];
 
 $MinaCollectorObj = new MinaCollector();
 ?>
@@ -19,11 +19,15 @@ $MinaCollectorObj = new MinaCollector();
     </head>
     <body>
         <?php
+		  if (isset($_SESSION['mineria'])){
         echo "<p>Se elimino la tabla #" . $id ."?</p>";
         $MinaCollectorObj->deleteMina($id);
-        ?>
-        <a href="read_mina.php"><button>VOLVER</button></a>
-       
+         echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_mina.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
+  
   
     </body>
 </html>

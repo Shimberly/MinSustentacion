@@ -18,13 +18,14 @@ class mineralcollector extends collector
   }
     
     function deletemineral($id) {
+        $rows = self::$db->deleteRow("DELETE FROM detalle_produccion WHERE id_mineral=$id",null);
         $rows = self::$db->deleteRow("DELETE FROM mineral WHERE id_mineral=$id",null);
     
     
     }
    
-    function createmineral($nombre,$apellido) {
-        $rows = self::$db->insertRow("INSERT INTO mineral (nombre, descripcion) VALUES ('$nombre', '$apellido')",null);
+    function createmineral($nombre,$descripcion) {
+        $rows = self::$db->insertRow("INSERT INTO mineral (nombre, descripcion) VALUES ('$nombre', '$descripcion')",null);
         
     }
     function updatemineral($id_mineral,$nombre,$descripcion) {

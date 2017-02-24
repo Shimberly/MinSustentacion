@@ -13,17 +13,19 @@ $paisCollectorObj = new paisCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+        
     </head>
     <body>
-        <?php
-        echo "<p>Se elimino el pais #" . $id ." :c </p>";
+         <?php
+		  if (isset($_SESSION['mineria'])){
+        
+              echo "<p>Se elimino el pais #" . $id ." :c </p>";
         $paisCollectorObj->deletePais($id);
-        ?>
-        <a href="leerPais.php"><button>VOLVER</button></a>
-       
+       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=leerPais.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>
