@@ -7,6 +7,7 @@ $id = $_GET['ID'];
 $extension = $_GET['EX'];
 $id_mina = $_GET['IM'];
 $num_frente = $_GET['NF'];
+$nombre = $_GET['NO'];
 
 $MinaCollectorObj = new MinaCollector();
 
@@ -102,11 +103,22 @@ $MinaCollectorObj = new MinaCollector();
                          }
                          echo "</select>";
                     
+                  
+                     echo "<br>";
+                    
+                       
+                        echo "<label>num_frente &nbsp;&nbsp;&nbsp;</label>";
+                        echo "<input type='text' value='". $num_frente ."' name='num_frente'>";
+
                         echo "<br>";
 
-                        echo "<label>num_frente &nbsp;&nbsp;&nbsp;</label>";
-                        echo "<input type='text' value='". $num_frente ."' name='num_frente'>"
+			echo "<label >Nombre </label>";
+
+				 echo "<input type='text' name='nombre' value='". $nombre ."'>";
+				  echo "<br>";
                     ?>
+
+
                     <br><br>
                     <?php
                     echo "<a href='save_update_tunel.php?ID=". $id ."'><button type='submit'>Modificar</button></a>";

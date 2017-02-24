@@ -6,12 +6,14 @@ class Tunel
     private $extension;
     private $num_frente;
     private $id_mina;
+ 	private $nombre;
     
-     function __construct($id_tunel, $extension, $num_frente, $id_mina) {
+     function __construct($id_tunel, $extension, $num_frente, $id_mina, $nombre) {
        $this->id_tunel = $id_tunel;
        $this->extension = $extension;
        $this->num_frente = $num_frente;
        $this->id_mina = $id_mina;
+	$this->nombre = $nombre;
      }
     
      function setIdTunel($id_tunel){
@@ -39,6 +41,12 @@ class Tunel
      } 
      function getIdMina(){
        return $this->id_mina;
+     } 
+ function setNombre($id_mina){
+       $this->nombre = $nombre;
+     } 
+     function getNombre(){
+       return $this->nombre;
      } 
     
 }
