@@ -28,9 +28,9 @@ class PersonaCollector extends collector
         
     }
     
-     function updatePersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento) {
-        $rows = self::$db->insertRow("INSERT INTO persona (nombre,apellido,email,usuario,clave,ruc,id_empresa,id_licencia,fecha_nacimiento) VALUES ('$nombre', '$apellido','$email','$usuario','$clave','$ruc','$id_empresa','$id_licencia','$fecha_nacimiento')",null);
-        
+     function updatePersona($id,$nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento) {
+      
+         $rows = self::$db->insertRow("UPDATE persona SET nombre='$nombre' , apellido='$apellido' , email='$email' , usuario='$usuario' , clave='$clave' , ruc='$ruc' , id_empresa='$id_empresa' ,id_licencia= '$id_licencia',fecha_nacimiento= '$fecha_nacimiento' WHERE id_persona='$id'" ,null);
     }
 }
 ?>

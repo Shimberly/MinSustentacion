@@ -1,35 +1,37 @@
 <?php
 
-include_once('Persona.php');
+include_once('DatosTunel.php');
 include_once("/var/www/html/ProyectoPSW2016Mineria/paginas/modelo/collector.php");
 
-class PersonaCollector extends collector
+class DatosTunelCollector extends collector
 {
   
-  function showPersonas() {
-    $rows = self::$db->getRows("SELECT * FROM persona");        
+  function showDatosTunels() {
+    $rows = self::$db->getRows("SELECT * FROM datos_tunel");        
     ##echo "linea 1";
-    $arrayPersona= array();        
+    $arrayDatosTunel= array();        
     foreach ($rows as $c){
-      $aux = new Persona($c{'id_persona'},$c{'nombre'},$c{'apellido'},$c{'email'},$c{'usuario'},$c{'clave'},$c{'ruc'},$c{'id_empresa'},$c{'id_licencia'},$c{'fecha_nacimiento'});
-      array_push($arrayPersona, $aux);
+      $aux = new DatosTunel($c{'id_datos_tunel'},$c{'oxigeno'},$c{'metano'});
+      array_push($arrayDatosTunel, $aux);
     }
-    return $arrayPersona;        
+    return $arrayDatosTunel;        
   }
     
-    function deletePersona($id) {
-        $rows = self::$db->deleteRow("DELETE FROM Persona WHERE id_persona=$id",null);
+    function deleteDatosTunel($id) {
+        
+        $rows = self::$db->deleteRow("DELETE FROM detalle_reporte WHERE id_tunel=$id",null);
+        $rows = self::$db->deleteRow("DELETE FROM datos_tunel WHERE id_datos_tunel=$id",null);
     
     
     }
    
-    function createPersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento) {
-        $rows = self::$db->insertRow("INSERT INTO persona (nombre,apellido,email,usuario,clave,ruc,id_empresa,id_licencia,fecha_nacimiento) VALUES ('$nombre', '$apellido','$email','$usuario','$clave','$ruc','$id_empresa','$id_licencia','$fecha_nacimiento')",null);
+    function createDatosTunel($oxigeno,$metano) {
+        $rows = self::$db->insertRow("INSERT INTO datos_tunel (oxigeno,metano) VALUES ('$oxigeno', '$metano')",null);
         
     }
     
-     function updatePersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento) {
-        $rows = self::$db->insertRow("INSERT INTO persona (nombre,apellido,email,usuario,clave,ruc,id_empresa,id_licencia,fecha_nacimiento) VALUES ('$nombre', '$apellido','$email','$usuario','$clave','$ruc','$id_empresa','$id_licencia','$fecha_nacimiento')",null);
+     function updateDatosTunel($id,$oxigeno,$metano) {
+        $rows = self::$db->insertRow("UPDATE datos_tunel SET oxigeno='$oxigeno' , metano='$metano' WHERE id_datos_tunel='$id'" ,null);
         
     }
 }

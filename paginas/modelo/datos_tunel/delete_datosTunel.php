@@ -1,11 +1,11 @@
 <?php
 session_start();
-include_once("PersonaCollector.php");
+include_once("DatosTunelCollector.php");
 
 $id = $_GET['ID'];
 
 
-$PersonaCollectorObj = new PersonaCollector();
+$DatosTunelCollectorObj = new DatosTunelCollector();
 ?>
 
 <!DOCTYPE html>
@@ -13,17 +13,23 @@ $PersonaCollectorObj = new PersonaCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
+        <link href="../../estilo.css" rel="stylesheet">
     	
     
     </head>
     <body>
-        <?php
-        echo "<p>Se elimino la tabla #" . $id ."?</p>";
-        $PersonaCollectorObj->deletePersona($id);
-        ?>
-        <a href="read_persona.php"><button>VOLVER</button></a>
        
+        <?php
+		  if (isset($_SESSION['mineria'])){
+        echo "<p>Se elimino la tabla #" . $id ."?</p>";
+        $DatosTunelCollectorObj->deleteDatosTunel($id);
+       
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_datos_tunel.php'>";
+        
+                          }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>

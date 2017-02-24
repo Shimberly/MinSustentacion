@@ -1,19 +1,12 @@
 <?php
 session_start();
-include_once("PersonaCollector.php");
+include_once("DatosTunelCollector.php");
 
-$id = $_POST['id_mina'];
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$email = $_POST['email'];
-$usuario = $_POST['usuario'];
-$clave = $_POST['clave'];
-$ruc = $_POST['ruc'];
-$id_empresa = $_POST['id_empresa'];
-$id_licencia = $_POST['id_licencia'];
-$fecha_nacimiento = $_POST['fecha_nacimiento'];
+$id = $_POST['id_DatosTunel'];
+$oxigeno = $_POST['oxigeno'];
+$metano = $_POST['metano'];
 
-$PersonaCollectorObj = new PersonaCollector();
+$DatosTunelCollectorObj = new DatosTunelCollector();
 ?>
 
 <!DOCTYPE html>
@@ -21,17 +14,25 @@ $PersonaCollectorObj = new PersonaCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
+        <link href="../../estilo.css" rel="stylesheet">
     	
     
     </head>
     <body>
+        
         <?php
-        echo "<p>Se modifico una nueva mina</p>";
-        $PersonaCollectorObj->updatePersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento);
+		  if (isset($_SESSION['mineria'])){
+
+        echo "<p>Se modifico un nuevo dato de mina</p>";
+        $DatosTunelCollectorObj->updateDatosTunel($id,$oxigeno,$metano);
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_datos_tunel.php'>";
         ?>
-        <a href="read_persona.php"><button>VOLVER</button></a>
        
+        <?php
+                          }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>

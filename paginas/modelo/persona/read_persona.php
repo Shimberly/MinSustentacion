@@ -3,8 +3,7 @@ session_start();
 ?>
 <?php
 include_once('PersonaCollector.php');
-$usuario = $_SESSION['mineria'];
-$id;
+
 
 $PersonaCollectorObj = new PersonaCollector();
 
@@ -22,6 +21,7 @@ $PersonaCollectorObj = new PersonaCollector();
 <body>
      <?php
 		  if (isset($_SESSION['mineria'])){
+              $usuario = $_SESSION['mineria'];
     ?>
        <div class="container">
         <br>

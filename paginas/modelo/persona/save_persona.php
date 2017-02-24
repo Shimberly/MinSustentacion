@@ -10,7 +10,7 @@ $clave = $_POST['clave'];
 $ruc = $_POST['ruc'];
 $id_empresa = $_POST['id_empresa'];
 $id_licencia = $_POST['id_licencia'];
-$fecha_nacimiento = $_POST['fecha_nacimiento'];
+$fecha_nacimiento = $_POST['fecha'];
 
 
 $PersonaCollectorObj = new PersonaCollector();
@@ -21,17 +21,21 @@ $PersonaCollectorObj = new PersonaCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
+        
     
     </head>
     <body>
+        
         <?php
+		  if (isset($_SESSION['mineria'])){
+   
         echo "<p>Se creo un  nuevo usuario </p>";
         $PersonaCollectorObj->createPersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento);
-        ?>
-        <a href="read_persona.php"><button>VOLVER</button></a>
-       
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_persona.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
   
     </body>
 </html>

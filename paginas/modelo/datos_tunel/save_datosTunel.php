@@ -1,19 +1,12 @@
 <?php
 session_start();
-include_once("PersonaCollector.php");
+include_once("DatosTunelCollector.php");
 
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$email = $_POST['email'];
-$usuario = $_POST['usuario'];
-$clave = $_POST['clave'];
-$ruc = $_POST['ruc'];
-$id_empresa = $_POST['id_empresa'];
-$id_licencia = $_POST['id_licencia'];
-$fecha_nacimiento = $_POST['fecha_nacimiento'];
+$oxigeno = $_POST['oxigeno'];
+$metano = $_POST['metano'];
 
 
-$PersonaCollectorObj = new PersonaCollector();
+$DatosTunelCollectorObj = new DatosTunelCollector();
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +20,15 @@ $PersonaCollectorObj = new PersonaCollector();
     </head>
     <body>
         <?php
-        echo "<p>Se creo un  nuevo usuario </p>";
-        $PersonaCollectorObj->createPersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento);
-        ?>
-        <a href="read_persona.php"><button>VOLVER</button></a>
-       
-  
+		  if (isset($_SESSION['mineria'])){
+    ?>
+        <?php
+        echo "<p> Se creo un  nuevo usuario </p>";
+        $DatosTunelCollectorObj->createDatosTunel($oxigeno,$metano);
+               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_datos_tunel.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
     </body>
 </html>
