@@ -105,8 +105,9 @@ h1{
 
 h1{float: left}
 
-.cabecera{
+#ilo{
     background-color: cyan;
+    color: aqua;
     text-align: center;
 }
 

@@ -66,7 +66,7 @@
             </header>
             
           <br><br>  
-            <div class="cabecera">
+            <div id="ilo">
                                 <h1 class="asd">Tablas de la base de datos</h1>
                                 <h2>Paul</h2>
                                 <a href="modelo/produccion/read_produccion.php"#>{ PRODUCCIÓN }</a>

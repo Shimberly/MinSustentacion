@@ -22,7 +22,8 @@ $PersonaCollectorObj = new PersonaCollector();
             if($c->getEmail() == $email && $c->getClave() == $clave){
                
                 $_SESSION['mineria']= $email;
-		        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=calidad.php'>";
+                 
+		        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=calidad.php?ID=". $c->getIdLicencia(). "'>";
                 
             }
         }
