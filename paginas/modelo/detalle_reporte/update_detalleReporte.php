@@ -2,28 +2,23 @@
 session_start();
 ?>
 <?php
-include_once("PersonaCollector.php");
+include_once("DetalleReporteCollector.php");
 $usuario = $_SESSION['mineria'];
 
-$id = $_GET['ID'];
-$nombre = $_GET['NM'];
-$apellido = $_GET['AP'];
-$email = $_GET['EM'];
-$usuario = $_GET['US'];
-$clave = $_GET['PS'];
-$ruc = $_GET['RU'];
-$id_empresa = $_GET['IE'];
-$id_licencia = $_GET['IL'];
-$fecha_nacimiento = $_GET['FE'];
+$id_detalle_reporte = $_GET['id_detalle_reporte'];
+$id_dron = $_GET['id_dron'];
+$id_tunel = $_GET['id_tunel'];
+$id_reporte = $_GET['id_tunel'];
+$id_datos_tunel = $_GET['id_datos_tunel'];
 
-$PersonaCollectorObj = new PersonaCollector();
+$DetalleReporteCollectorObj = new DetalleReporteCollector();
 
 ?>
 
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Clase Persona </title>
+	<title>Clase DetalleReporte </title>
     <link rel="stylesheet" href="../estilo.css">
           
 </head>
@@ -33,18 +28,18 @@ $PersonaCollectorObj = new PersonaCollector();
         <div class="usuario">
         <?php
             echo "<p>Hola usuario <span class='nmbUser'>" . $usuario . "<span> </p>";
-            echo "<a href='read_persona.php'><button>Salir</button></a>";
+            echo "<a href='read_detalleReporte.php'><button>Salir</button></a>";
 		    
         ?>
         </div>
      </header>
     <div class="contLogin">
-                <h1>MODIFICAR USUARIO</h1>
-                <form class="login" method="post" action="save_update_mina.php">
+                <h1>MODIFICAR Detalle Reporte</h1>
+                <form class="login" method="post" action="save_update_detalleReporte.php">
                       <?php
-                        echo "<label >Id_Persona</label>";
+                        echo "<label >Id_DetalleReporte</label>";
 
-                        echo "<input type='text' name='id_persona' value='". $id ."' readonly>";
+                        echo "<input type='text' name='id_DetalleReporte' value='". $id ."' readonly>";
                         echo "<br>";
 
                         echo "<label >Nombre </label>";
@@ -74,7 +69,7 @@ $PersonaCollectorObj = new PersonaCollector();
                         echo "<label>Id_Empresa</label>";
 
                          echo "<select value='". $id_empresa ."' name='id_empresa'>";
-                         foreach ($PersonaCollectorObj->showPersonas() as $c){
+                         foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
                             if ($id_empresa == $c->getIdEmpresa()){
                                 echo "<option selected>". $c->getIdEmpresa()."</option>";
                             }else{   
@@ -92,7 +87,7 @@ $PersonaCollectorObj = new PersonaCollector();
                     ?>
                     <br><br>
                     <?php
-                     echo "<a href='save_update_persona.php?ID=". $id ."'><button type='submit'>Modificars</button></a>";
+                     echo "<a href='save_update_DetalleReporte.php?ID=". $id ."'><button type='submit'>Modificars</button></a>";
                     ?>
                 </form>
             </div>

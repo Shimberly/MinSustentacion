@@ -1,35 +1,34 @@
 <?php
 
-include_once('Persona.php');
+include_once('DetalleReporte.php');
 include_once("/var/www/html/ProyectoPSW2016Mineria/paginas/modelo/collector.php");
 
-class PersonaCollector extends collector
+class DetalleReporteCollector extends collector
 {
   
-  function showPersonas() {
-    $rows = self::$db->getRows("SELECT * FROM persona");        
-    ##echo "linea 1";
-    $arrayPersona= array();        
+  function showDetalleReportes() {
+    $rows = self::$db->getRows("SELECT * FROM detalle_reporte");        
+    $arrayDetalleReporte= array();        
     foreach ($rows as $c){
-      $aux = new Persona($c{'id_persona'},$c{'nombre'},$c{'apellido'},$c{'email'},$c{'usuario'},$c{'clave'},$c{'ruc'},$c{'id_empresa'},$c{'id_licencia'},$c{'fecha_nacimiento'});
-      array_push($arrayPersona, $aux);
+      $aux = new DetalleReporte($c{'id_detalle_reporte'},$c{'id_dron'},$c{'id_tunel'},$c{'id_reporte'},$c{'id_datos_tunel'});
+      array_push($arrayDetalleReporte, $aux);
     }
-    return $arrayPersona;        
+    return $arrayDetalleReporte;        
   }
     
-    function deletePersona($id) {
-        $rows = self::$db->deleteRow("DELETE FROM Persona WHERE id_persona=$id",null);
+    function deleteDetalleReporte($id) {
+        $rows = self::$db->deleteRow("DELETE FROM detalle_reporte WHERE id_detalle_reporte=$id",null);
     
     
     }
    
-    function createPersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento) {
-        $rows = self::$db->insertRow("INSERT INTO persona (nombre,apellido,email,usuario,clave,ruc,id_empresa,id_licencia,fecha_nacimiento) VALUES ('$nombre', '$apellido','$email','$usuario','$clave','$ruc','$id_empresa','$id_licencia','$fecha_nacimiento')",null);
+    function createDetalleReporte($id_dron,$id_tunel,$id_reporte,$id_datos_tunel) {
+        $rows = self::$db->insertRow("INSERT INTO detalle_reporte (id_dron,id_tunel,id_reporte,id_datos_tunel) VALUES ('$id_dron', '$id_tunel','$id_reporte','$id_datos_tunel')",null);
         
     }
     
-     function updatePersona($nombre,$apellido,$email,$usuario,$clave,$ruc,$id_empresa,$id_licencia,$fecha_nacimiento) {
-        $rows = self::$db->insertRow("INSERT INTO persona (nombre,apellido,email,usuario,clave,ruc,id_empresa,id_licencia,fecha_nacimiento) VALUES ('$nombre', '$apellido','$email','$usuario','$clave','$ruc','$id_empresa','$id_licencia','$fecha_nacimiento')",null);
+     function updateDetalleReporte($id_dron,$id_tunel,$id_reporte,$id_datos_tunel) {
+        $rows = self::$db->insertRow("INSERT INTO detalle_reporte (id_dron,id_tunel,id_reporte,id_datos_tunel) VALUES ('$id_dron', '$id_tunel','$id_reporte','$id_datos_tunel')",null);
         
     }
 }
