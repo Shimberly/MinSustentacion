@@ -18,6 +18,7 @@ class mineralcollector extends collector
   }
     
     function deletemineral($id) {
+        $rows = self::$db->deleteRow("DELETE FROM detalle_produccion WHERE id_mineral=$id",null);
         $rows = self::$db->deleteRow("DELETE FROM mineral WHERE id_mineral=$id",null);
     
     
