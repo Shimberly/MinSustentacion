@@ -32,20 +32,7 @@ $DetalleReporteCollectorObj = new DetalleReporteCollector();
                 <h1>CREAR detalle produccion</h1>
                 <form class="login" method="post" action="save_detalleReporte.php">
                     <label >id_dron </label>
-                    <input type="text" name="id_dron" placeholder="Introduce tu id_dron">
-                    <br>
-		    <label >id_tunel </label>
-                    <input type="text" name="id_tunel" placeholder="Introduce tu id_tunel">
-                    <br>
-		    <label >id_reporte </label>
-                    <input type="text" name="id_reporte" placeholder="Introduce tu id_reporte">
-                    <br>
-		    <label >id_datos_tunel </label>
-                    <input type="text" name="id_datos_tunel" placeholder="Introduce tu id_datos_tunel">
-                    <br>
-
-		
-		     
+     
                     <label>id_dron</label>
                    
                     <?php
