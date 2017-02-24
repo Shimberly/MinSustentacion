@@ -3,8 +3,6 @@ session_start();
 ?>
 <?php
 include_once("DronCollector.php");
-$usuario = $_SESSION['mineria'];
-$id;
 
 $DronCollectorObj = new DronCollector();
 

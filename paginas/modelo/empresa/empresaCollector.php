@@ -2,6 +2,7 @@
 
 include_once('empresa.php');
 include_once("../collector.php");
+include_once("../dron/droncollector.php");
 
 class empresaCollector extends collector
 {
@@ -18,6 +19,7 @@ function showEmpresas() {
   }
 
       function deleteEmpresa($id) {
+          
         $rows = self::$db->deleteRow("DELETE FROM empresa WHERE id_empresa=$id",null);
     
     
