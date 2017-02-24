@@ -1,5 +1,5 @@
 <?php
-include_once("/var/www/html/ProyectoPSW2016Mineria/paginas/modelo/persona/PersonaCollector.php");
+include_once("modelo/persona/PersonaCollector.php");
 session_start();
 $email = $_POST['email'];
 $clave = $_POST['clave'];

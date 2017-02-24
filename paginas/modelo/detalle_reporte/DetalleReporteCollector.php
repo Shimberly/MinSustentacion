@@ -1,7 +1,7 @@
 <?php
 
 include_once('DetalleReporte.php');
-include_once("/var/www/html/ProyectoPSW2016Mineria/paginas/modelo/collector.php");
+include_once("../collector.php");
 
 class DetalleReporteCollector extends collector
 {
