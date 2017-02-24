@@ -3,8 +3,20 @@ session_start();
 ?>
 <?php
 include_once("DetalleReporteCollector.php");
+include_once("../dron/DronCollector.php");
+include_once("../tunel/TunelCollector.php");
+include_once("../reporte_tuneles/ReporteTunelesCollector.php");
+
+include_once("../datos_tunel/DatosTunelCollector.php");
 
 $DetalleReporteCollectorObj = new DetalleReporteCollector();
+
+$DronCollectorObj = new DronCollector();
+$TunelCollectorObj = new TunelCollector();
+
+$ReporteTunelesCollectorObj = new ReporteTunelesCollector();
+
+$DatosTunelCollectorObj = new DatosTunelCollector();
 
 ?>
 
@@ -69,43 +81,43 @@ $DetalleReporteCollectorObj = new DetalleReporteCollector();
         <br> 
                 <form class="login" method="post" action="save_detalleReporte.php">
                     <br>  
-                    <label >ID</label>
+                    <label >Id_Dron</label>
      
                     <?php
-                     echo "<select name='Id_Dron'>";
-                     foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
-                        echo "<option>". $c->getid_dron()."</option>";
+                     echo "<select name='id_dron'>";
+                     foreach ($DronCollectorObj->showDron() as $c){
+                        echo "<option>". $c->getIdDron()."</option>";
                      }
                      echo "</select>";
                     ?>
                      <br>
                     
-                    <label>id_tunel</label>
+                    <label>Id_Tunel</label>
                    
                     <?php
                      echo "<select name='id_tunel'>";
-                     foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
-                        echo "<option>". $c->getid_tunel()."</option>";
+                     foreach ($TunelCollectorObj->showTunels() as $c){
+                        echo "<option>". $c->getIdTunel()."</option>";
                      }
                      echo "</select>";
                     ?>
                      <br>
-                    <label>id_reporte</label>
+                    <label>Id_Reporte</label>
                    
                     <?php
                      echo "<select name='id_reporte'>";
-                     foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
-                        echo "<option>". $c->getid_reporte()."</option>";
+                     foreach ($ReporteTunelesCollectorObj->showReporteTuneles() as $c){
+                        echo "<option>". $c->getId_reporte()."</option>";
                      }
                      echo "</select>";
                     ?>
                      <br>
-                    <label>id_datos_tunel</label>
+                    <label>Id_Datos_Tunel</label>
                    
                     <?php
                      echo "<select name='id_datos_tunel'>";
-                     foreach ($DetalleReporteCollectorObj->showDetalleReportes() as $c){
-                        echo "<option>". $c->getid_datos_tunel()."</option>";
+                     foreach ($DatosTunelCollectorObj->showDatosTunels() as $c){
+                        echo "<option>". $c->getId_datos_tunel()."</option>";
                      }
                      echo "</select>";
                     ?>

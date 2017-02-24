@@ -14,8 +14,7 @@ $DatosTunelCollectorObj = new DatosTunelCollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../../estilo.css" rel="stylesheet">
-    	
+        
     
     </head>
     <body>

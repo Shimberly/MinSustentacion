@@ -15,17 +15,20 @@ $detalle_produccioncollectorObj = new detalle_produccioncollector();
     <head>
         <meta charset="utf-8">
         <title>Login</title>
-        <link href="../estilo.css" rel="stylesheet">
-    	
-    
+        
     </head>
     <body>
         <?php
+		  if (isset($_SESSION['mineria'])){
+   
         echo "<p>Se creo un nuevo detalle_produccion</p>";
         $detalle_produccioncollectorObj->createdetalle_produccion($id_produccion,$id_mineral,$peso);
-        ?>
-        <a href="read_detalle_produccion.php"><button>VOLVER</button></a>
-       
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=read_detalle_produccion.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
+  
   
     </body>
 </html>
